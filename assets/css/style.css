@@ -32,7 +32,8 @@ a:hover { padding-bottom:1px;text-decoration:none;border-bottom:1px solid rgba(0
 .container { max-width:1000px;width:80%; }
 .single-column { margin:0 auto; }
 .wrap {min-height: 500px;}
-.page-inner {max-width: 700px;}
+.article-container {padding: 5% 10%; position: relative;}
+.article-wrap {width: 90%; max-width: 960px; background: #fff; margin: 3em auto 0; padding-top: 2em; border: 1px solid #ddd; border-width: 0 1px;}
 .tag-line { color: rgba(0,0,0,0.9); font-size: 1em; margin: -2em 0 2em; padding-bottom: 2em; border-bottom: 3px double #eee;}
 
 /* header */
