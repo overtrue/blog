@@ -48,7 +48,7 @@ a:hover { padding-bottom:1px;text-decoration:none;border-bottom:1px solid rgba(0
 .post-list ul, .repo-list ul { list-style: decimal; padding-left: 20px; }
 .block { margin:20px; padding-bottom: 15px; clear:both; position: relative; border-bottom: 1px solid rgba(0,0,0,0.05); }
 .block-title { margin:0;margin-left:-1.2px;font-size:24px;font-weight:400;line-height:1.2; }
-.post-snippet { margin:5px 0 10px;margin-left:-0.9px;font-weight:300;color:rgba(0,0,0,0.6); }
+.post-snippet { margin:5px 0 10px;margin-left:-0.9px;font-weight:300;color:rgba(0,0,0,0.8); }
 .post-image { display:block;background-color:#fafafa;background-position:center;background-origin:border-box;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
 .post-list .post-image { position: absolute; width: 140px; height: 100px; top:50%; margin-top: -60px;}
 .post-list .post-image:hover {border:none;}
