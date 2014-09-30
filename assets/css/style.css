@@ -15,6 +15,7 @@ a:hover { padding-bottom:1px;text-decoration:none;border-bottom:1px solid rgba(0
 .bg-image:before { content: ""; background: #fff; position: absolute; height: 100%; width: 100%; top:0;left:0; z-index: 0; background:rgba(0, 0, 0, 0.5);}
 .bg-white { background:#fff; }
 .hidden {display: none;}
+.holder {padding:50px;}
 .clearfix { *zoom:1; }
 .clearfix:before,.clearfix:after { display:table;content:" "; }
 .clearfix:after { clear:both; }
