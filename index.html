@@ -32,9 +32,7 @@ layout: default
             <ul>
                 {% for post in site.posts %}
                 <li class="post-block">
-                    {% if post.image %}
-                    <a href="{{ post.url }}" class="post-image"><img src="post.image"></a>
-                    {% endif %}
+
                     <div class="block-content">
                         <h3 class="post-title">
                             <a href="{{ post.url }}">{% post.title %}</a>
