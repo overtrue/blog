@@ -12,7 +12,8 @@ a:hover { padding-bottom:1px;text-decoration:none;border-bottom:1px solid rgba(0
     * { -webkit-print-color-adjust:exact;print-color-adjust:exact; }
 }
 .bg-image { position: relative; background-color:rgba(0,0,0,0.7); background-size: cover; color: #fff;}
-.bg-image:before { content: ""; background: #fff; position: absolute; height: 100%; width: 100%; top:0;left:0; z-index: 0; background:rgba(0, 0, 0, 0.5);}
+.bg-image h1,.bg-image h2, .bg-image h3 .bg-image h4, .bg-image h5, .bg-image h6 {color: #fff;}
+.bg-image:before { content: ""; background-color: #fff; position: absolute; height: 100%; width: 100%; top:0;left:0; z-index: 0; background:rgba(0, 0, 0, 0.5);}
 .bg-white { background:#fff; }
 .hidden {display: none;}
 .holder {padding:50px;}
