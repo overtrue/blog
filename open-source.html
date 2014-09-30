@@ -30,18 +30,15 @@ menu: open-source
     jQuery(document).ready(function(){
         var repoListWrap = $('.project-list');
             repoListWrap.html('<ul></ul>');
+        var repoList = repoListWrap.find('ul');
+
         $.get('https://api.github.com/users/overtrue/repos?type=owner', function(repos){
             repos = _.sortBy(repos, function(repo){
                 return - (repo.stargazers_count + repo.forks_count + repo.watchers_count);
             });
 
-            var repoList = repoListWrap.find('ul');
-            console.log(repoList);
-
             repos.forEach(function(repo){
-                if (repo.fork) {
-                    return;
-                };
+                if (repo.fork) return;
 
                 var repoTemplate = $('#repo-template').html();
                 var item = repoTemplate.replace(/\[(.*?)\]/g, function(){
