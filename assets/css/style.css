@@ -33,7 +33,7 @@ a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:
 .container { max-width:1000px;width:80%; }
 .single-column { margin:0 auto; }
 .wrap {min-height: 500px;}
-.article-wrap {width: 90%; max-width: 960px; background: #fff; margin: 3em auto 30px; padding-top: 2em; border: 1px solid #ddd; border-width: 0 1px; }
+.article-wrap {width: 90%; max-width: 960px; background: #fff; margin: 3em auto 30px; padding-top: 2em; border: 1px solid #ddd; /*border-width: 0 1px;*/ box-shadow: 1px 1px 3px #aaa; }
 .article-container {padding: 5% 10%; position: relative;}
 .tag-line { color: rgba(0,0,0,0.3); font-size: 1em !important; margin: -2em 0 2em; padding-bottom: 2em; border-bottom: 3px double #eee;}
 
