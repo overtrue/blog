@@ -1,8 +1,8 @@
 /* base */
 html{background: #eee;}
 body { overflow-x:hidden;padding:0;margin:0; }
-a, .typo a { color:inherit;text-decoration:none;border-bottom:1px solid rgba(0,0,0,0.6); }
-a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none;border-bottom:1px solid rgba(0,0,0,0.6); }
+a, .typo a { color:inherit;text-decoration:none;border-bottom:1px solid inherit; }
+a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none;border-bottom:1px solid inherit; }
 @media screen and (max-device-width:1000px) {
     html { -webkit-text-size-adjust:none; }
 }
@@ -23,8 +23,8 @@ a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none;border-bottom:1
 .clearfix:before,.clearfix:after { display:table;content:" "; }
 .clearfix:after { clear:both; }
 .text-center { text-align:center; }
-*[class*="ion-"] { padding:5px; }
-*[class*="ion-"]:hover { border:0; }
+*[class*="ion-"] { padding:5px;  border:none;}
+*[class*="ion-"]:hover { border:none;}
 .button { display:inline-block;position:relative;height:38px;line-height:37px;padding:0 16px;outline:0;color:rgba(0,0,0,0.44);background:rgba(0,0,0,0);font-size:14px;text-align:center;text-decoration:none;cursor:pointer;border:1px solid rgba(0,0,0,0.15);vertical-align:bottom;white-space:nowrap;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;letter-spacing:-0.02em;font-weight:400;font-style:normal;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-border-radius:999em;-moz-border-radius:999em;border-radius:999em;-webkit-transition:.1s background-color,.1s border-color,.1s color;-moz-transition:.1s background-color,.1s border-color,.1s color;-ms-transition:.1s background-color,.1s border-color,.1s color;-o-transition:.1s background-color,.1s border-color,.1s color;transition:.1s background-color,.1s border-color,.1s color; }
 .button--small { height:32px;line-height:31px;padding:0 14px; }
 .button:focus,.button:active,.button:hover { color:rgba(0,0,0,0.6);border-color:rgba(0,0,0,0.3); }
