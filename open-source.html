@@ -38,7 +38,11 @@ menu: open-source
 
             repos.forEach(function(repo){
                 if (repo.fork) return;
-
+                repo.name = _.mixin({
+                              capitalize: function(string) {
+                                return string.charAt(0).toUpperCase() + string.substring(1);
+                              }
+                            });
                 var repoTemplate = $('#repo-template').html();
                 var item = repoTemplate.replace(/\[(.*?)\]/g, function(){
                     return eval(arguments[1]);
