@@ -44,18 +44,18 @@ a:hover { padding-bottom:1px;text-decoration:none;border-bottom:1px solid rgba(0
 .nav-tabs>ul>li.active a, .nav-tabs>ul>li>a:hover { margin-top: -1px; color:#fff;border-top:3px rgba(255,255,255, 0.9) solid; border-bottom: none; }
 
 /* post */
-.post-list { padding:20px 0; }
-.post-list ul { list-style: decimal; padding-left: 20px; }
+.post-list, .repo-list { padding:20px 0; }
+.post-list ul, .repo-list ul { list-style: decimal; padding-left: 20px; }
 .block { margin:20px; padding-bottom: 15px; clear:both; position: relative; border-bottom: 1px solid rgba(0,0,0,0.05); }
-.post-title { margin:0;margin-left:-1.2px;font-size:24px;font-weight:400;line-height:1.2; }
+.block-title { margin:0;margin-left:-1.2px;font-size:24px;font-weight:400;line-height:1.2; }
 .post-snippet { margin:5px 0 10px;margin-left:-0.9px;font-weight:300;color:rgba(0,0,0,0.6); }
 .post-image { display:block;background-color:#fafafa;background-position:center;background-origin:border-box;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
 .post-list .post-image { position: absolute; width: 140px; height: 100px; top:50%; margin-top: -60px;}
 .post-list .post-image:hover {border:none;}
 .post-list .post-image ~  .block-content { padding-left: 155px;}
 .post-image img {max-height: 100px;}
-.post-meta-wrap { vertical-align:top;line-height:1.6;color:rgba(0,0,0,0.3);font-size:16px; clear:both; display: block; }
-.post-meta-wrap a { color:rgba(0,0,0,0.5);margin:0 10px; }
+.block-meta-wrap { vertical-align:top;line-height:1.6;color:rgba(0,0,0,0.3);font-size:16px; clear:both; display: block; }
+.block-meta-wrap a { color:rgba(0,0,0,0.5);margin:0 10px; }
 
 /* footer */
 .footer { padding:10px 0 25px;font-size:12px;color:rgba(0,0,0,0.3);border-top:1px solid rgba(0,0,0,0.05); }
