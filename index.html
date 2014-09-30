@@ -1,17 +1,4 @@
----
-layout: default
----
-
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <title></title>
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/ionicons.min.css"></head>
-    <link rel="stylesheet" href="assets/css/typo.css"></head>
-    <link rel="stylesheet" href="assets/css/style.css"></head>
-<body>
-    <section class="metabar"></section>
+{% include '_includes/header.html' %}
         <section class="bg-image">
             <header class="header text-center container single-column">
                 <h1 class="logo">Overtrue</h1>
@@ -46,9 +33,4 @@ layout: default
                 {% endfor %}
             </ul>
         </section>
-        <footer class="footer container single-column">
-            <p class="text-center"><a href="">GitHub</a><a href="">Weibo</a> POWERED BY <a href="#">GitHub Pages</a></p>
-        </footer>
-    </div>
-</body>
-</html>
+{% include '_includes/footer.html' %}
