@@ -39,6 +39,9 @@ menu: open-source
 
             repoListWrap.html('<ul></ul>');
             repos.forEach(function(repo){
+                if (repo.fork) {
+                    continue;
+                };
                 var repoTemplate = $('#repo-template').html();
                 var item = repoTemplate.replace(/\[(.*?)\]/g, function(){
                     return eval(arguments[1]);
