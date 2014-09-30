@@ -33,6 +33,7 @@ a:hover { padding-bottom:1px;text-decoration:none;border-bottom:1px solid rgba(0
 .single-column { margin:0 auto; }
 .wrap {min-height: 500px;}
 .page-inner {max-width: 700px;}
+.tag-line { color: rgba(0,0,0,0.9); font-size: 1em; margin: -2em 0 2em; padding-bottom: 2em; border-bottom: 3px double #eee;}
 
 /* header */
 .header { height:200px;padding:50px 20px 0;}
