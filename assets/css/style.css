@@ -11,7 +11,7 @@ a:hover { padding-bottom:1px;text-decoration:none;border-bottom:1px solid rgba(0
 @media print and (color) {
     * { -webkit-print-color-adjust:exact;print-color-adjust:exact; }
 }
-.bg-image { position: relative; background:rgba(0,0,0,0.7) url('https://d262ilb51hltx0.cloudfront.net/max/2000/1*meI8JFnkIk5f_F6GN_aOnA.jpeg') 50% 50%; background-size: cover; color: #fff;}
+.bg-image { position: relative; background-color:rgba(0,0,0,0.7); background-size: cover; color: #fff;}
 .bg-image:before { content: ""; background: #fff; position: absolute; height: 100%; width: 100%; top:0;left:0; z-index: 0; background:rgba(0, 0, 0, 0.5);}
 .bg-white { background:#fff; }
 .hidden {display: none;}
@@ -30,6 +30,7 @@ a:hover { padding-bottom:1px;text-decoration:none;border-bottom:1px solid rgba(0
 .container { max-width:1000px;width:80%; }
 .single-column { margin:0 auto; }
 .wrap {min-height: 500px;}
+.page-inner {max-width: 700px;}
 
 /* header */
 .header { height:200px;padding:50px 20px 0;}
@@ -61,8 +62,8 @@ a:hover { padding-bottom:1px;text-decoration:none;border-bottom:1px solid rgba(0
 
 /* page */
 .page-header { height: 100px; background: rgba(0,0,0,0.5); }
-.page-title {padding:30px 0; max-width: 700px; }
-.page-content {padding:20px 0; max-width: 700px; }
+.page-title {padding:30px 0; }
+.page-content {padding:20px 0; }
 
 /* footer */
 .footer { padding:10px 0 25px;font-size:12px;color:rgba(0,0,0,0.3);border-top:1px solid rgba(0,0,0,0.05); }
