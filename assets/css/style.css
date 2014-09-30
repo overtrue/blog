@@ -35,7 +35,7 @@ a:hover { padding-bottom:1px;text-decoration:none;border-bottom:1px solid rgba(0
 .wrap {min-height: 500px;}
 .article-wrap {width: 90%; max-width: 960px; background: #fff; margin: 3em auto 30px; padding-top: 2em; border: 1px solid #ddd; border-width: 0 1px; }
 .article-container {padding: 5% 10%; position: relative;}
-.tag-line { color: rgba(0,0,0,0.9); font-size: 1em; margin: -2em 0 2em; padding-bottom: 2em; border-bottom: 3px double #eee;}
+.tag-line { color: rgba(0,0,0,0.9); font-size: 1em !important; margin: -2em 0 2em; padding-bottom: 2em; border-bottom: 3px double #eee;}
 
 /* header */
 .header { height:200px;padding:50px 20px 0;}
