@@ -64,7 +64,8 @@ a:hover { padding-bottom:1px;text-decoration:none;border-bottom:1px solid rgba(0
 /* page */
 .page-header { height: 100px; background: rgba(0,0,0,0.5); }
 .page-title {padding:30px 0; }
-.page-content {padding:20px 0; min-height: 500px;}
+.page-content {padding:20px 0; min-height: 500px; line-height: 1.5;}
+.page-content p {margin:10px 0;}
 
 /* footer */
 .footer { padding:10px 0 25px;font-size:12px;color:rgba(0,0,0,0.3);border-top:1px solid rgba(0,0,0,0.05); }
