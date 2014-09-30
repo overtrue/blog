@@ -35,17 +35,20 @@ menu: open-source
             });
 
             var repoListWrap = $('.project-list');
+                repoListWrap.html('<ul></ul>');
             var repoList = repoListWrap.find('ul');
 
-            repoListWrap.html('<ul></ul>');
             repos.forEach(function(repo){
                 if (repo.fork) {
                     return;
                 };
+
                 var repoTemplate = $('#repo-template').html();
                 var item = repoTemplate.replace(/\[(.*?)\]/g, function(){
                     return eval(arguments[1]);
                 });
+
+                console.log(item);
 
                 repoList.append(item);
             });
