@@ -1,0 +1,44 @@
+---
+layout: page
+title: 开源项目
+menu: open-source
+---
+<div class="project-list container single-column bg-white">
+    Loading...
+</div>
+<div id="repo-template">
+    <li class="block">
+        <div class="block-content">
+            <h3 class="repo-title">
+                <a href="[repo.url]">[repo.name]</a>
+            </h3>
+            <p class="repo-description">[repo.description]</p>
+            <small class="repo-meta-wrap"></small>
+        </div>
+    </li>
+</div>
+<script src="assets/js/jquery-2.1.1.min.js"></script>
+<script src="assets/js/underscore-min.js"></script>
+<script>
+    jQuery(document).ready(function(){
+        $.get('https://api.github.com/users/overtrue/repos?type=owner', function(repos){
+
+            repos = _.sortBy(repos, function(repo){
+                return - (repo.stargazers_count + repo.forks_count + repo.watchers_count);
+            });
+
+            var repoListWrap = $('.project-list');
+            var repoList = repoListWrap.find('ul');
+
+            repoListWrap.html('<ul></ul>');
+            repos.forEach(function(repo){
+                var repoTemplate = $('#repo-template').html();
+                var item = repoTemplate.replace(/\[(.*?)\]/g, function(){
+                    return eval(arguments[1]);
+                });
+
+                repoListWrap.append(item);
+            });
+        });
+    });
+</script>

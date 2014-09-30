@@ -1,40 +1,24 @@
 ---
-layout: default
+layout: page
+title: 安正超 - overtrue
+menu: blog
 ---
 
-{% include header.html %}
-        <section class="bg-image">
-            <header class="header text-center container single-column">
-                <h1 class="logo">Overtrue</h1>
-                <p class="signature">https://overtrue.me</p>
-                <!-- <section class="links">
-                    <a href="#" class="ion-social-github"></a>
-                </section> -->
-            </header>
-            <nav class="nav-tabs container single-column">
-                <ul>
-                    <li class="active"><a href="#">blog</a></li>
-                    <li><a href="#">open-source</a></li>
-                    <li><a href="#">about</a></li>
-                </ul>
-            </nav>
-        </section>
-        <section class="post-list container single-column bg-white">
-            <ul>
-                {% for post in site.posts %}
-                <li class="post-block">
-                    {% if post.image %}
-                    <a href="{{ post.url }}" class="post-image"><img src="post.image"></a>
-                    {% endif %}
-                    <div class="block-content">
-                        <h3 class="post-title">
-                            <a href="{{ post.url }}">{{ post.title }}</a>
-                        </h3>
-                        <p class="post-snippet">{{ post.excerpt }}</p>
-                        <small class="post-meta-wrap"><time><i class="icon ion-ios7-calendar-outline"></i>{{ post.date }}</time></small>
-                    </div>
-                </li>
-                {% endfor %}
-            </ul>
-        </section>
-{% include footer.html %}
+<div class="post-list container single-column bg-white">
+    <ul>
+        {% for post in site.posts %}
+        <li class="block">
+            {% if post.image %}
+            <a href="{{ post.url }}" class="post-image"><img src="post.image"></a>
+            {% endif %}
+            <div class="block-content">
+                <h3 class="post-title">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </h3>
+                <p class="post-snippet">{{ post.excerpt }}</p>
+                <small class="post-meta-wrap"><time><i class="icon ion-ios7-calendar-outline"></i>{{ post.date }}</time></small>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
