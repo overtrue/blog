@@ -43,7 +43,7 @@ a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:
 .header .signature { letter-spacing:.01rem;font-weight:400;font-style:normal;font-size:22px;margin:0 0 10px 0;padding:0; }
 .header .links a { font-size:40px; }
 .nav-tabs { border-top:1px rgba(255,255,255, 0.5) solid; }
-.nav-tabs>ul { margin-top:-1px;}
+.nav-tabs>ul { margin-top:-1px; margin-bottom: 0;}
 .nav-tabs>ul>li { display:inline-block;margin-right:20px; }
 .nav-tabs>ul>li>a {letter-spacing:-0.02em;font-weight:700;font-style:normal;display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:#ccc;padding:20px 0; }
 .nav-tabs>ul>li.active a, .nav-tabs>ul>li>a:hover { margin-top: -1px; color:#fff;border-top:3px rgba(255,255,255, 0.9) solid; border-bottom: none; }
