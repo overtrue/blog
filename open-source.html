@@ -26,11 +26,12 @@ menu: open-source
 </div>
 <script src="/assets/js/underscore-min.js"></script>
 <script>
-    jQuery(document).ready(function(){
+    $(document).ready(function(){
         var repoListWrap = $('.repo-list');
         var repoList = $('<ul></ul>');
 
         $.get('https://api.github.com/users/overtrue/repos?type=owner', function(repos){
+            if (!repos) { repoListWrap.html('加载失败！') };
             repos = _.sortBy(repos, function(repo){
                 return - (repo.stargazers_count + repo.forks_count + repo.watchers_count);
             });
