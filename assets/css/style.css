@@ -12,7 +12,7 @@ a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:
 @media print and (color) {
     * { -webkit-print-color-adjust:exact;print-color-adjust:exact; }
 }
-.bg-image { position: relative; background-color:rgba(0,0,0,0.6); background-size: cover; background-position: 100% 50%;  }
+.bg-image { position: relative; background-color:rgba(0,0,0,0.6); background-size: cover; background-position: 50% 100%;  }
 .bg-image>* {position: relative; z-index:1;}
 .bg-image h1,.bg-image h2, .bg-image h3 .bg-image h4, .bg-image h5, .bg-image h6, .bg-image *{ color: rgba(255, 255, 255, 0.9); }
 .bg-image:before { content: ""; background-color: #fff; position: absolute; height: 100%; width: 100%; top:0;left:0; z-index: 0; background:rgba(0, 0, 0, 0.5);}
