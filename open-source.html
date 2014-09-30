@@ -8,6 +8,7 @@ menu: open-source
     <div class="holder text-center">
         Loading...
     </div>
+    <ul></ul>
 </div>
 <div id="repo-template" class="hidden">
     <li class="block">
@@ -29,7 +30,6 @@ menu: open-source
 <script>
     jQuery(document).ready(function(){
         var repoListWrap = $('.project-list');
-            repoListWrap.html('<ul></ul>');
         var repoList = repoListWrap.find('ul');
 
         $.get('https://api.github.com/users/overtrue/repos?type=owner', function(repos){
