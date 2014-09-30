@@ -61,7 +61,7 @@ a:hover { padding-bottom:1px;text-decoration:none;border-bottom:1px solid rgba(0
 
 /* page */
 .page-header { height: 100px; background: rgba(0,0,0,0.5); }
-.page-title {padding:30px 0; }
+.page-title {padding:30px 0; max-width: 700px; }
 .page-content {padding:20px 0; max-width: 700px; }
 
 /* footer */
