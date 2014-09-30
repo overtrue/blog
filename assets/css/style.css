@@ -1,5 +1,5 @@
 /* base */
-body { font-family:"Helvetica Neue",Helvetica,"Noto Sans","ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;-webkit-font-smoothing:antialiased;letter-spacing:-0.02em;font-weight:400;font-style:normal;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:rgba(0,0,0,0.3);font-size:18px;line-height:1.4;overflow-x:hidden;padding:0;margin:0; }
+body { overflow-x:hidden;padding:0;margin:0; }
 a { color:inherit;text-decoration:none; }
 a:hover { padding-bottom:1px;text-decoration:none;border-bottom:1px solid rgba(0,0,0,0.6); }
 @media screen and (max-device-width:1000px) {
