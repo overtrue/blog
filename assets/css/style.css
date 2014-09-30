@@ -38,7 +38,7 @@ a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:
 .tag-line { color: rgba(0,0,0,0.3); font-size: 1em !important; margin: -2em 0 2em; padding-bottom: 2em; border-bottom: 3px double #eee;}
 
 /* header */
-.header { height:200px;padding:50px 20px 0;}
+.header { height:160px;padding:50px 20px 0;}
 .header .logo { font-weight:700;font-style:normal;font-size:50px;letter-spacing:-0.04em;line-height:1;color:#fff; margin-bottom:8px;outline:0;word-break:break-word; }
 .header .signature { letter-spacing:.01rem;font-weight:400;font-style:normal;font-size:22px;margin:0 0 10px 0;padding:0; }
 .header .links a { font-size:40px; }
