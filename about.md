@@ -12,7 +12,7 @@ class: padY30
 ## 概况
 
 - 电话：186-1168-7990
-- 邮箱：anzhengchao@gmail.com
+- 邮箱：anzhengchao#gmail.com
 - 主页：[http://overtrue.me](http://overtrue.me)
 - Q Q：44294631
 - 微博：[@安正超](http://weibo.com/joychaocc)
@@ -22,7 +22,7 @@ class: padY30
 
 ## 教育
 - 大连工业大学网络技术专业 — 大专 2009 - 2012
-- 东北财经大学公司管理专业 — 本科 2009 - 2012
+- 东北财经大学公司管理专业 — 本科 2009 - 2012 （自考）
 
 ## 技能
 - Laravel贡献者;
