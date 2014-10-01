@@ -34,8 +34,8 @@ a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:
 .single-column { margin:0 auto; }
 .padY30 {padding:30px 0;}
 .wrap {min-height: 500px;}
-.article-wrap {width: 90%; max-width: 960px; background: #fff; margin: 3em auto 30px; padding-top: 2em; /*border: 1px solid #ddd;*/ /*border-width: 0 1px;*/ box-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
-.article-container {padding: 5% 10%; position: relative;}
+.article-wrap {width: 90%; max-width: 960px; margin: 0 auto 30px; padding-top: 2em; /*border: 1px solid #ddd;*/ /*border-width: 0 1px;*/ box-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
+.article-container {padding: 5% 10%; position: relative; background: #fff; }
 .tag-line { color: rgba(0,0,0,0.3); font-size: 1em !important; margin: -2em 0 2em; padding-bottom: 2em; border-bottom: 3px double #eee;}
 
 /* header */
