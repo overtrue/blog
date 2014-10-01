@@ -2,6 +2,7 @@
 layout: page
 title: 关于
 menu: about
+class: padY30
 ---
 
 ## 概况
