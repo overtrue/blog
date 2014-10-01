@@ -4,6 +4,8 @@ title: 关于
 menu: about
 ---
 
+<div class="container single-column">
+
 ##概况
 
 - 电话：186-1168-7990
@@ -54,3 +56,5 @@ menu: about
 - [Translator](https://github.com/overtrue/Translator) PHP多语言支持工具；
 
 更多： [http://overtrue.me](http://overtrue.me)
+
+</div>
