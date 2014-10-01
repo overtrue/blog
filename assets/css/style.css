@@ -47,7 +47,7 @@ a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:
 .nav-tabs { border-top:1px rgba(255,255,255, 0.5) solid; }
 .nav-tabs>ul { margin-left: 0; margin-bottom: 0;margin-right: 0;  margin-top:-1px;}
 .nav-tabs>ul>li { display:inline-block;margin-right:20px; }
-.nav-tabs>ul>li>a {letter-spacing:-0.02em;font-weight:700;font-style:normal;display:inline-block;font-size:18px;text-transform:uppercase;letter-spacing:.2em;color:#ccc;padding:20px 0; }
+.nav-tabs>ul>li>a {letter-spacing:-0.02em;font-weight:300;font-style:normal;display:inline-block;font-size:18px;text-transform:uppercase;letter-spacing:.2em;color:#ccc;padding:20px 0; }
 .nav-tabs>ul>li.active a, .nav-tabs>ul>li>a:hover { margin-top: -1px; color:#fff;border-top:3px rgba(255,255,255, 0.3) solid; border-bottom: none; }
 
 /* sidebar */
