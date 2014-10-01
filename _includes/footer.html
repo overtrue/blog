@@ -3,6 +3,16 @@
         </footer>
         <script>
         $('.bg-image').each(function(){ if($(this).data('src')) $(this).css('background-image', $(this).data('src')) });
+        $('.sidebar-switch').click(function(){
+            var sidebar = $('.sidebar');
+            var width = sidebar.width() + 40;
+
+            if ($('html').css('padding-left') != '0px') {
+                $('html').animate({paddingLeft: 0}, 100);
+            } else {
+                $('html').animate({paddingLeft: width}, 100);
+            }
+        });
         </script>
 </body>
 </html>

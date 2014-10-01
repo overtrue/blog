@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/typo.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/jquery-2.1.1.min.js"></script>
+</head>
+<body class="typo">
+    <div class="metabar">
+        <div class="sidebar-switch "><i class="ion-navicon"></i></div>
+    </div>
+    <div class="sidebar">
+        <ul class="menu">
+            <li><a href="/"> <i class="ion-ios7-home"></i>首页</a></li>
+            <li><a href="/blog"> <i class="ion-ios7-paper"></i>博客</a></li>
+            <li><a href="/open-source"><i class="ion-social-github"></i>开源</a></li>
+            <li><a href="/about"><i class="ion-ios7-person"></i>关于</a></li>
+        </ul>
+    </div>
+    <div class="bg-image" style="background-image:url(assets/images/header-bg.jpg)">
+        <header class="header text-center container single-column">
+            <h1 class="logo">Overtrue</h1>
+            <p class="signature">安正超，码农，手艺人。</p>
+            <!-- <div class="links">
+            <a href="#" class="ion-social-github"></a>
+        </div>
+        -->
+    </header>
+    <nav class="nav-tabs container single-column">
+        <ul>
+            <li {% if page.menu == 'blog' || !page.menu %}class="active"{% endif %}>
+                <a href="/">blog</a>
+            </li>
+            <li {% if page.menu == 'open-source' %}class="active"{% endif %}>
+                <a href="/open-source.html">open-source</a>
+            </li>
+            <li {% if page.menu == 'about' %}class="active"{% endif %}>
+                <a href="/about.html">about</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="wrap typo bg-white">
+    <div class="container single-column {{ page.class }}">{{ content }}</div>
+</div>
+<footer class="footer">
+    <p class="text-center">
+        <a href="">GitHub</a>
+        <a href="">Weibo</a>
+        POWERED BY
+        <a href="#">GitHub Pages</a>
+    </p>
+</footer>
+<script>
+        $('.bg-image').each(function(){ if($(this).data('src')) $(this).css('background-image', $(this).data('src')) });
+        $('.sidebar-switch').click(function(){
+            var sidebar = $('.sidebar');
+            var width = sidebar.width() + 40;
+
+            if ($('html').css('padding-left') != '0px') {
+                $('html').animate({paddingLeft: 0}, 100);
+            } else {
+                $('html').animate({paddingLeft: width}, 100);
+            }
+        });
+        </script>
+</body>
+</html>
