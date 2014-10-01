@@ -5,8 +5,8 @@ layouts:     ./_layouts
 include:     ['.htaccess']
 exclude:     []
 keep_files:  ['.git','.svn']
-timezone:    nil
-encoding:    nil
+timezone:    PRC
+encoding:    UTF-8
 
 future:      true
 show_drafts: nil
