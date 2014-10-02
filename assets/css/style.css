@@ -73,7 +73,7 @@ a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:
 .post-list .post-image:hover {border:none;}
 .post-list .post-image ~  .block-content { padding-left: 155px;}
 .post-image img {max-height: 100px;}
-.mark a {color: #000; font-weight: 700px;}
+.mark a {color: #1abc9c; font-weight: 700px;}
 
 /* page */
 .page-title {padding:30px 0; }
