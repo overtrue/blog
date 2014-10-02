@@ -11,15 +11,15 @@ encoding:    UTF-8
 future:      true
 show_drafts: nil
 limit_posts: 0
-pygments:    true
+highlighter: true
 
 relative_permalinks: true
 
 permalink:     date
 paginate_path: 'page:num'
 
-markdown:      maruku
-markdown_ext:  markdown,mkd,mkdn,md
+markdown:      kramdown
+markdown_ext:  markdown,md
 textile_ext:   textile
 
 excerpt_separator: "\n\n"
