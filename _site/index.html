@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>安正超 - overtrue</title>
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/ionicons.min.css">
+    <link rel="stylesheet" href="/assets/css/typo.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/jquery-2.1.1.min.js"></script>
+</head>
+<body class="typo">
+    <div class="metabar">
+        <div class="sidebar-switch "><i class="ion-navicon"></i></div>
+    </div>
+    <div class="sidebar">
+        <ul class="menu">
+            <li><a href="/"><i class="ion-ios7-home-outline"></i>首页</a></li>
+            <li><a href="/blog"><i class="ion-ios7-paper-outline"></i>博客</a></li>
+            <li><a href="/open-source"><i class="ion-social-github-outline"></i>开源</a></li>
+            <li><a href="/about"><i class="ion-ios7-person"></i>关于</a></li>
+        </ul>
+    </div>
+<div class="bg-image" style="background-image:url(/assets/images/header-bg.jpg)">
+    <header class="header text-center container single-column">
+        <h1 class="logo">Overtrue</h1>
+        <p class="signature">码农，手艺人。</p>
+        <!-- <div class="links">
+            <a href="#" class="ion-social-github"></a>
+        </div> -->
+    </header>
+    <nav class="nav-tabs container single-column">
+        <ul>
+            <li class="active"><a href="/">博客</a></li>
+            <li ><a href="/open-source">开源</a></li>
+            <li ><a href="/about">关于</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="wrap typo bg-white">
+<div class="container single-column ">
+    <div class="post-list">
+    <ul>
+        
+        <li class="block">
+            
+            <div class="block-content">
+                <h3 class="block-title">
+                    <a href="/2014/10/02/%E4%B8%AD%E6%96%87.html">各种实用的东东收集2</a>
+                </h3>
+                <div class="block-snippet">估计大部分人都会有这样的问题，在平常玩微博或的时候看到别人分享的一些实用的东西，比如一些NB的js库，或者php组件等等。看完当时加入了浏览器书签。但是出现的现象就是很少去翻它，或者说由于懒得整理后期也不好找了，这篇就当作是一个书签整理吧，也算是知识共享，有兴趣的朋友可以经常过来看看，会继续保持更新。
+
+</div>
+                <small class="post-meta-wrap"><time><i class="icon ion-ios7-calendar-outline"></i>2014/10/02</time></small>
+            </div>
+        </li>
+        
+        <li class="block">
+            
+            <div class="block-content">
+                <h3 class="block-title">
+                    <a href="/2014/10/02/things.html">各种实用的东东收集</a>
+                </h3>
+                <div class="block-snippet">估计大部分人都会有这样的问题，在平常玩微博或的时候看到别人分享的一些实用的东西，比如一些NB的js库，或者php组件等等。看完当时加入了浏览器书签。但是出现的现象就是很少去翻它，或者说由于懒得整理后期也不好找了，这篇就当作是一个书签整理吧，也算是知识共享，有兴趣的朋友可以经常过来看看，会继续保持更新。
+
+</div>
+                <small class="post-meta-wrap"><time><i class="icon ion-ios7-calendar-outline"></i>2014/10/02</time></small>
+            </div>
+        </li>
+        
+        <li class="block">
+            
+            <div class="block-content">
+                <h3 class="block-title">
+                    <a href="/2014/09/10/hello.html">Hello world!</a>
+                </h3>
+                <div class="block-snippet">Hello world!
+
+</div>
+                <small class="post-meta-wrap"><time><i class="icon ion-ios7-calendar-outline"></i>2014/09/10</time></small>
+            </div>
+        </li>
+        
+    </ul>
+</div>
+</div>
+</div>
+        <footer class="footer">
+            <p class="text-center"><a href="">GitHub</a><a href="">Weibo</a> POWERED BY <a href="#">GitHub Pages</a></p>
+        </footer>
+        <script>
+        $('.bg-image').each(function(){ if($(this).data('src')) $(this).css('background-image', $(this).data('src')) });
+        $('.sidebar-switch').click(function(){
+            var sidebar = $('.sidebar');
+            var width = sidebar.width() + 40;
+
+            if ($('html').css('padding-left') != '0px') {
+                $('html').animate({paddingLeft: 0}, 100);
+            } else {
+                $('html').animate({paddingLeft: width}, 100);
+            }
+        });
+        </script>
+</body>
+</html>
