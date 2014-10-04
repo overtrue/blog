@@ -37,6 +37,7 @@ a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:
 .article-wrap {width: 90%; max-width: 960px; margin: 0 auto 30px; padding-top: 3em; /*border: 1px solid #ddd;*/ /*border-width: 0 1px;*/  }
 .article-container {padding: 5% 10%; position: relative; background: #fff; box-shadow: 1px 1px 3px rgba(0,0,0,0.3);}
 .tag-line { color: rgba(0,0,0,0.3); font-size: 1em !important; margin: -2em 0 2em; padding-bottom: 2em; border-bottom: 3px double #eee;}
+a.readmore {display: hidden;}
 
 /* header */
 .header { height:160px;padding:50px 20px 0;}
@@ -64,6 +65,7 @@ a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:
 .block-snippet { margin:5px 0 10px; margin-left:-0.9px;font-weight:300;color:rgba(0,0,0,0.8); }
 .block-meta-wrap { vertical-align:top;line-height:1.6;color:rgba(0,0,0,0.3);font-size:16px; clear:both; display: block; }
 .block-meta-wrap a { color:rgba(0,0,0,0.5);margin:0 10px; }
+.block:hover a.readmore{display: inline-block;}
 
 /* post */
 .post-list, .repo-list { padding:20px 0; }
