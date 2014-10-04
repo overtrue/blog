@@ -88,3 +88,4 @@ class: padY30 mark
 
 ## 其它
 - [汉典](http://www.zdic.net/) 汉字相关的查询，例如拼音，词典等。
+- [中国语言文字网](http://www.china-language.gov.cn/) 中国语言文字网，各种汉语汉字规范。
