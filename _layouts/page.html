@@ -8,12 +8,10 @@
         </div> -->
     </header>
     <nav class="nav-tabs container single-column">
-        <ul>
-            <li {% if page.menu == 'blog' || !page.menu %}class="active"{% endif %}><a href="/">博客</a></li>
-            <li {% if page.menu == 'open-source' %}class="active"{% endif %}><a href="/open-source">开源</a></li>
-            <li {% if page.menu == 'bookmark' %}class="active"{% endif %}><a href="/bookmark">书签</a></li>
-            <li {% if page.menu == 'about' %}class="active"{% endif %}><a href="/about">关于</a></li>
-        </ul>
+        <a {% if page.menu == 'blog' || !page.menu %}class="active"{% endif %} href="/">博客</a>
+        <a {% if page.menu == 'open-source' %}class="active"{% endif %} href="/open-source">开源</a>
+        <a {% if page.menu == 'bookmark' %}class="active"{% endif %} href="/bookmark">书签</a>
+        <a {% if page.menu == 'about' %}class="active"{% endif %} href="/about">关于</a>
     </nav>
 </div>
 <div class="wrap typo bg-white">
