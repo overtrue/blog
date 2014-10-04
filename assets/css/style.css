@@ -1,6 +1,6 @@
 /* base */
-html{position: relative; z-index: 0; height: 100%;}
-body { overflow-x:hidden;position: relative; padding:0;margin:0; background: #eee; color: #555; }
+html{position: relative; z-index: 0; }
+body { overflow-x:hidden;position: relative; padding:0;margin:0; background: #eee; color: #555; height: 100%;}
 a, .typo a { color:#333; text-decoration:none; border:none; }
 a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:1px solid #333; }
 @media screen and (max-device-width:1000px) {
