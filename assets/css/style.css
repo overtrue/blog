@@ -12,6 +12,7 @@ a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:
     .post-list ul {padding-left: 10px;}
     .sidebar {padding:1em;}
     .nav-tabs{display: -webkit-box; -webkit-box-pack:justify; display: box; box-pack:justify; }
+    .footer .links a {padding:0 5px;}
 }
 
 @media print {
