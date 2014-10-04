@@ -11,6 +11,7 @@ a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:
     .container {width: 90%;}
     .post-list ul {padding-left: 10px;}
     .sidebar {padding:1em;}
+    .nav-tabs{display: -webkit-box; -webkit-box-pack:justify; display: box; box-pack:justify; }
     .footer .links {max-width: 300px; font-size: 12px;}
 }
 
@@ -53,7 +54,7 @@ a.readmore {display: hidden;}
 .header .signature { letter-spacing:.0.1em;font-weight:400;font-style:normal;font-size:1.8em;margin:0 0 0.8em 0;padding:0; }
 .header .links a { font-size:4em; }
 .metabar {position: absolute; top:0; left:0; right:0; height: 4em; z-index: 2;}
-.nav-tabs { max-width: 300px; padding:0; text-align: center; display: -webkit-box;  -webkit-box-pack: justify;}
+.nav-tabs { display:-moz-box; -moz-box-pack:center; -moz-box-align:center;  /* Safari、Opera 以及 Chrome */display:-webkit-box; -webkit-box-pack:center; -webkit-box-align:center;/* W3C */display:box; box-pack:center; box-align:center;}
 .nav-tabs a { display: block; letter-spacing:-0.02em;font-weight:300;font-style:normal; font-size:1.3em;text-transform:uppercase;letter-spacing:.2em;color:#ccc;padding:1em 0; }
 .nav-tabs a.active, .nav-tabs a:hover { margin-top: -1px; color:#fff; border-bottom: none; }
 
@@ -92,5 +93,5 @@ a.readmore {display: hidden;}
 
 /* footer */
 .footer { padding:1em 0 2em;font-size:1em;color:rgba(0,0,0,0.3);border-top:1px solid rgba(0,0,0,0.05); }
-.footer .links {display: -webkit-box; -webkit-box-pack: center; }
+.footer .links {display:-moz-box; -moz-box-pack:center; -moz-box-align:center;  /* Safari、Opera 以及 Chrome */display:-webkit-box; -webkit-box-pack:center; -webkit-box-align:center;/* W3C */display:box; box-pack:center; box-align:center;}
 .footer .links a { color:rgba(0,0,0,0.6); display: block; padding:0 10px;}
