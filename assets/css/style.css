@@ -47,7 +47,7 @@ a.readmore {display: hidden;}
 .metabar {position: absolute; top:0; left:0; right:0; height: 4em; z-index: 2;}
 .nav-tabs>ul { margin-left: 0; margin-bottom: 0;margin-right: 0;  margin-top:-1px; text-align: center;}
 .nav-tabs>ul>li { display:inline-block;margin-right:2em; }
-.nav-tabs>ul>li>a {letter-spacing:-0.02em;font-weight:300;font-style:normal;display:inline-block;font-size:1em;text-transform:uppercase;letter-spacing:.2em;color:#ccc;padding:2em 0; }
+.nav-tabs>ul>li>a {letter-spacing:-0.02em;font-weight:300;font-style:normal;display:inline-block;font-size:2em;text-transform:uppercase;letter-spacing:.2em;color:#ccc;padding:2em 0; }
 .nav-tabs>ul>li.active a, .nav-tabs>ul>li>a:hover { margin-top: -1px; color:#fff; border-bottom: none; }
 
 /* sidebar */
