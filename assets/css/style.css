@@ -11,6 +11,7 @@ a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:
     .container {width: 90%;}
     .post-list ul {padding-left: 10px;}
     .sidebar {padding:1em;}
+    .footer .links {max-width: 300px;}
 }
 
 @media print {
@@ -91,5 +92,5 @@ a.readmore {display: hidden;}
 
 /* footer */
 .footer { padding:1em 0 2em;font-size:1em;color:rgba(0,0,0,0.3);border-top:1px solid rgba(0,0,0,0.05); }
-.footer .links {display: -webkit-box; -webkit-box-pack: justify; max-width: 300px;}
+.footer .links {display: -webkit-box; -webkit-box-pack: justify; max-width: 600px;}
 .footer .links a { color:rgba(0,0,0,0.6); display: block;}
