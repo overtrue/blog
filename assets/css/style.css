@@ -3,24 +3,7 @@ html{position: relative; z-index: 0; }
 body { overflow-x:hidden;position: relative; padding:0;margin:0; background: #eee; color: #555; height: 100%;}
 a, .typo a { color:#333; text-decoration:none; border:none; }
 a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:1px solid #333; }
-@media screen and (max-width:1000px) {
-    html { -webkit-text-size-adjust:none; }
-}
 
-@media screen and (max-width:600px) {
-    .container {width: 90%;}
-    .post-list ul {padding-left: 10px;}
-    .sidebar {padding:1em;}
-    .nav-tabs{display: -webkit-box; -webkit-box-pack:justify; display: box; box-pack:justify; }
-    .footer .links a {padding:0 5px; font-size: 12px;}
-}
-
-@media print {
-    h2,h3 { page-break-after:avoid;page-break-inside:avoid; }
-}
-@media print and (color) {
-    * { -webkit-print-color-adjust:exact;print-color-adjust:exact; }
-}
 .bg-image { position: relative; background-color:rgba(0,0,0,0.3); background-size: cover; background-position: 50% 100%;  }
 .bg-image>* {position: relative; z-index:2;}
 .bg-image h1,.bg-image h2, .bg-image h3 .bg-image h4, .bg-image h5, .bg-image h6, .bg-image *{ color: rgba(255, 255, 255, 0.9); }
@@ -95,3 +78,22 @@ a.readmore {display: hidden;}
 .footer { padding:1em 0 2em;font-size:1em;color:rgba(0,0,0,0.3);border-top:1px solid rgba(0,0,0,0.05); }
 .footer .links {display:-moz-box; -moz-box-pack:center; -moz-box-align:center;  /* Safari、Opera 以及 Chrome */display:-webkit-box; -webkit-box-pack:center; -webkit-box-align:center;/* W3C */display:box; box-pack:center; box-align:center;}
 .footer .links a { color:rgba(0,0,0,0.6); display: block; padding:0 10px;}
+
+@media screen and (max-width:1000px) {
+    html { -webkit-text-size-adjust:none; }
+}
+
+@media screen and (max-width:600px) {
+    .container {width: 90%;}
+    .post-list ul {padding-left: 10px;}
+    .sidebar {padding:1em;}
+    .nav-tabs{display: -webkit-box; -webkit-box-pack:justify; display: box; box-pack:justify; }
+    .footer .links a {padding:0 5px; font-size: 12px;}
+}
+
+@media print {
+    h2,h3 { page-break-after:avoid;page-break-inside:avoid; }
+}
+@media print and (color) {
+    * { -webkit-print-color-adjust:exact;print-color-adjust:exact; }
+}
