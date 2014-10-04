@@ -66,6 +66,7 @@ a.readmore {display: hidden;}
 .block-snippet { margin:0.2em 0 0.5em !important; font-weight:300;color:rgba(0,0,0,0.8); }
 .block-meta-wrap, p.block-meta-wrap{ vertical-align:top;line-height:1.6;color:rgba(0,0,0,0.3);font-size:1.5em; clear:both; display: block; }
 .block-meta-wrap a { color:rgba(0,0,0,0.5);margin:0 1em; }
+.block-meta-wrap i {padding-right: 0.1em;}
 .block:hover a.readmore{display: inline-block;}
 
 /* post */
