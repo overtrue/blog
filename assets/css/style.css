@@ -41,8 +41,8 @@ a.readmore {display: hidden;}
 
 /* header */
 .header { height:14em;padding:4em 2em 0;}
-.header .logo { font-weight:700;font-style:normal;font-size:4em;letter-spacing:-0.04em;line-height:1;color:#fff; margin-bottom:0.8em;outline:0;word-break:break-word; }
-.header .signature { letter-spacing:.0.1em;font-weight:400;font-style:normal;font-size:2em;margin:0 0 0.8em 0;padding:0; }
+.header .logo { font-weight:700;font-style:normal;font-size:4em;letter-spacing:-0.04em;line-height:1;color:#fff; margin-bottom:0.2em;outline:0;word-break:break-word; }
+.header .signature { letter-spacing:.0.1em;font-weight:400;font-style:normal;font-size:1.8em;margin:0 0 0.8em 0;padding:0; }
 .header .links a { font-size:4em; }
 .metabar {position: absolute; top:0; left:0; right:0; height: 4em; z-index: 2;}
 .nav-tabs>ul { margin-left: 0; margin-bottom: 0;margin-right: 0;  margin-top:-1px; text-align: center;}
@@ -53,17 +53,18 @@ a.readmore {display: hidden;}
 /* sidebar */
 .sidebar-switch {padding:0.3em 0.4em; display:inline-block; height: 3em; text-align: center; vertical-align: middle; font-size: 3em; }
 .sidebar-switch:hover {color: #000;}
-.sidebar-switch i:before { vertical-align: top; }
+.sidebar-switch i {padding:0;}
+.sidebar-switch i:before { vertical-align: top; text-shadow: 0px 0px 0.1em #eee; color: #000;}
 .sidebar {box-sizing:border-box; z-index: -1; width:20em; height:100%; padding:2em; position: fixed; left: 0px; top:0; bottom:0; background: #333; color: #eee; box-shadow: -2px 0 5px #222 inset; }
 .sidebar ul {list-style: none; margin: 0;}
-.sidebar ul li a {color: #ddd !important; font-size: 2em;}
-.sidebar ul li a i {font-size: 2em; width: 2em; display: inline-block;}
+.sidebar ul li a {color: #ddd !important; font-size: 1.5em;}
+.sidebar ul li a i {font-size: 1em; width: 1.5em; display: inline-block;}
 
 /* block */
-.block { margin:2em; padding-bottom: 1.5em; clear:both; position: relative; border-bottom: 1px solid rgba(0,0,0,0.05); }
+.block { margin:1.5em; padding-bottom: 1.5em; clear:both; position: relative; border-bottom: 1px solid rgba(0,0,0,0.05); }
 .block-title { margin:0; font-size:2em;font-weight:400;line-height:1.2; }
-.block-snippet { margin:5px 0 10px; font-weight:300;color:rgba(0,0,0,0.8); }
-.block-meta-wrap { vertical-align:top;line-height:1.6;color:rgba(0,0,0,0.3);font-size:1.5em; clear:both; display: block; }
+.block-snippet { margin:0.2em 0 0.5em !important; font-weight:300;color:rgba(0,0,0,0.8); }
+.block-meta-wrap, p.block-meta-wrap{ vertical-align:top;line-height:1.6;color:rgba(0,0,0,0.3);font-size:1.5em; clear:both; display: block; }
 .block-meta-wrap a { color:rgba(0,0,0,0.5);margin:0 1em; }
 .block:hover a.readmore{display: inline-block;}
 
