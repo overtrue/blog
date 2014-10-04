@@ -83,7 +83,7 @@ a.readmore {display: hidden;}
 .post-list .post-image:hover {border:none;}
 .post-list .post-image ~  .block-content { padding-left: 155px;}
 .post-image img {max-height: 100px;}*/
-.mark a {color: #1abc9c; font-weight: 700;}
+.mark a {color: #1abc9c;}
 
 /* page */
 .page-title {padding:3em 0; }
