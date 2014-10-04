@@ -81,8 +81,10 @@ class: padY30 mark
 - [GitHub秘籍](https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md)
 
 
-
 ## 解决方案
 - [icomet](https://github.com/ideawu/icomet) 一个支持百万并发连接的comet服务器：icomet
 - [node-webkit](https://github.com/rogerwang/node-webkit) 基于chromium和nodejs的应用，允许你使用html+javascript开发桌面应用
 - [pdf2htmlEX](https://github.com/coolwanglu/pdf2htmlEX) 转换PDF为Html
+
+## 其它
+- [汉典](http://www.zdic.net/) 汉字相关的查询，例如拼音，词典等。
