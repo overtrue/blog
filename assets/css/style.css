@@ -51,7 +51,7 @@ a.readmore {display: hidden;}
 .header .signature { letter-spacing:.0.1em;font-weight:400;font-style:normal;font-size:1.8em;margin:0 0 0.8em 0;padding:0; }
 .header .links a { font-size:4em; }
 .metabar {position: absolute; top:0; left:0; right:0; height: 4em; z-index: 2;}
-.nav-tabs { max-width: 500px; padding:0; text-align: center; display: -webkit-box;  -webkit-box-pack: justify;}
+.nav-tabs { max-width: 300px; padding:0; text-align: center; display: -webkit-box;  -webkit-box-pack: justify;}
 .nav-tabs a { display: block; letter-spacing:-0.02em;font-weight:300;font-style:normal; font-size:2em;text-transform:uppercase;letter-spacing:.2em;color:#ccc;padding:1em 0; }
 .nav-tabs a.active, .nav-tabs a:hover { margin-top: -1px; color:#fff; border-bottom: none; }
 
