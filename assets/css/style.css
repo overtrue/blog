@@ -46,7 +46,7 @@ a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:
 a.readmore {display: hidden;}
 
 /* header */
-.header { height:14em;padding:4em 2em 0;}
+.header { height:10em;padding:4em 2em 0;}
 .header .logo { font-weight:700;font-style:normal;font-size:4em;letter-spacing:-0.04em;line-height:1;color:#fff; margin-bottom:0.2em;outline:0;word-break:break-word; }
 .header .signature { letter-spacing:.0.1em;font-weight:400;font-style:normal;font-size:1.8em;margin:0 0 0.8em 0;padding:0; }
 .header .links a { font-size:4em; }
