@@ -59,7 +59,7 @@ a.readmore {display: none;}
 .block-meta-wrap a { color:rgba(0,0,0,0.5);margin:0 1em; }
 .block-meta-wrap i {padding-right: 0.1em;}
 .block:hover a.readmore{display: inline-block; color: #999; padding-left: 10px;}
-.block:hover a.readmore:hover{border:none; color: #444; padding:0;}
+.block:hover a.readmore:hover{border:none; color: #444; padding-bottom:0;}
 
 /* post */
 .post-list, .repo-list { padding:2em 0; }
