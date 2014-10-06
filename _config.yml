@@ -21,5 +21,7 @@ paginate_path: 'page:num'
 markdown:      kramdown
 markdown_ext:  markdown,md
 textile_ext:   textile
+kramdown:
+  input: GFM
 
 excerpt_separator: "\n\n"
