@@ -18,8 +18,8 @@ relative_permalinks: true
 permalink:     date
 paginate_path: 'page:num'
 
-#markdown:      kramdown
-markdown: redcarpet
+markdown:      kramdown
+#markdown: redcarpet
 #redcarpet:
  # extensions: [fenced_code_blocks]
 markdown_ext:  markdown,md
