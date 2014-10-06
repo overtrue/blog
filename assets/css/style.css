@@ -29,7 +29,7 @@ a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:
 .article-wrap {width: 90%; max-width: 960px; margin: 0 auto 3em; padding-top: 3em; /*border: 1px solid #ddd;*/ /*border-width: 0 1px;*/  }
 .article-container {padding: 5% 10%; position: relative; background: #fff; box-shadow: 1px 1px 3px rgba(0,0,0,0.3);}
 .tag-line { color: rgba(0,0,0,0.3); font-size: 1em !important; margin: -2em 0 2em; padding-bottom: 2em; border-bottom: 3px double #eee;}
-a.readmore {display: hidden;}
+a.readmore {display: none;}
 
 /* header */
 .header { height:10em;padding:4em 2em 0;}
@@ -59,7 +59,7 @@ a.readmore {display: hidden;}
 .block-meta-wrap a { color:rgba(0,0,0,0.5);margin:0 1em; }
 .block-meta-wrap i {padding-right: 0.1em;}
 .block:hover a.readmore{display: inline-block; color: #999; padding-left: 10px;}
-.block:hover a.readmore:hover{border:none;}
+.block:hover a.readmore:hover{border:none; color: #444;}
 
 /* post */
 .post-list, .repo-list { padding:2em 0; }
