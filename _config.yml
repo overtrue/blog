@@ -34,11 +34,11 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   use_coderay: true
 
-  coderay:
-    coderay_wrap: div
-    coderay_line_numbers: nil
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
+coderay:
+  coderay_wrap: div
+  coderay_line_numbers: nil
+  coderay_tab_width: 4
+  coderay_bold_every: 10
+  coderay_css: class
 
 excerpt_separator: "\n\n"
