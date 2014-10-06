@@ -20,9 +20,13 @@ permalink:     date
 paginate_path: 'page:num'
 
 markdown:      kramdown
+#markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript","tables", "with_toc_data"]
 markdown_ext:  markdown,md
 textile_ext:   textile
 kramdown:
   input: GFM
+  enable_coderay: true
 
 excerpt_separator: "\n\n"
