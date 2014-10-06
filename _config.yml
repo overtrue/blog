@@ -12,16 +12,17 @@ future:      true
 show_drafts: nil
 limit_posts: 0
 pygments:    true
+highlighter: pygments
 
 relative_permalinks: true
 
 permalink:     date
 paginate_path: 'page:num'
 
-markdown:      kramdown
-#markdown: redcarpet
-#redcarpet:
- # extensions: [fenced_code_blocks]
+#markdown:      kramdown
+markdown: redcarpet2
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
 markdown_ext:  markdown,md
 textile_ext:   textile
 kramdown:
