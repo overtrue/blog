@@ -21,12 +21,24 @@ paginate_path: 'page:num'
 
 markdown:      kramdown
 #markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript","tables", "with_toc_data"]
+# redcarpet:
+  # extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript","tables", "with_toc_data"]
 markdown_ext:  markdown,md
 textile_ext:   textile
 kramdown:
   input: GFM
-  enable_coderay: true
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  use_coderay: true
+
+  coderay:
+    coderay_wrap: div
+    coderay_line_numbers: nil
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
 
 excerpt_separator: "\n\n"
