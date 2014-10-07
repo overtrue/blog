@@ -1,7 +1,7 @@
 /* base */
 html{position: relative; z-index: 0; }
 body { overflow-x:hidden;position: relative; padding:0;margin:0; background: #eee; color: #555; height: 100%;}
-a, .typo a { color:#333; text-decoration:none; border:none; }
+a, .typo a { text-decoration:none; border:none; }
 a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:1px solid #333; }
 
 .bg-image { position: relative; background-color:rgba(0,0,0,0.3); background-size: cover; background-position: 50% 100%;  }
