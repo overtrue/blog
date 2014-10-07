@@ -84,6 +84,13 @@ code[class*='language'] {white-space:nowrap;}
 .footer .links {display:-moz-box; -moz-box-pack:center; -moz-box-align:center;  /* Safari、Opera 以及 Chrome */display:-webkit-box; -webkit-box-pack:center; -webkit-box-align:center;/* W3C */display:box; box-pack:center; box-align:center;}
 .footer .links a { color:rgba(0,0,0,0.6); display: block; padding:0 10px;}
 
+.emoji {
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+    margin-bottom: -0.25em;
+}
+
 @media screen and (max-width:1000px) {
     html { -webkit-text-size-adjust:none; }
 }
