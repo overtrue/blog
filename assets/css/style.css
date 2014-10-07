@@ -106,6 +106,7 @@ code[class*='language'] {white-space:nowrap;}
     .typo h2 {font-size: 1.2em;}
     .typo h3 {font-size: 1.1em;}
     .typo h4 {font-size: 1em;}
+    .article-wrap { padding-top: 4em;}
 }
 
 @media print {
