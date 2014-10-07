@@ -31,7 +31,7 @@ a:hover, .typo a:hover { padding-bottom:1px;text-decoration:none; border-bottom:
 .tag-line { color: rgba(0,0,0,0.3); font-size: 1em !important; margin: -2em 0 2em; padding-bottom: 2em; border-bottom: 3px double #eee;}
 a.readmore {display: none;}
 
-code { background-color: rgba(0,0,0,0.04); border-radius: 3px;}
+code { background-color: rgba(0,0,0,0.04); border-radius: 3px; padding:0 3px;}
 
 /* header */
 .header { height:10em;padding:4em 2em 0;}
