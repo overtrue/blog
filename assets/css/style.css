@@ -47,7 +47,7 @@ code { background-color: rgba(0,0,0,0.04); border-radius: 3px;}
 .sidebar-switch {padding:0.3em 0.4em; display:inline-block; height: 3em; text-align: center; vertical-align: middle; font-size: 3em; }
 .sidebar-switch:hover {color: #000;}
 .sidebar-switch i {padding:0;}
-.sidebar-switch i:before { vertical-align: top; text-shadow: 0px 0px 0.1em #eee; color: #000;}
+.sidebar-switch i:before { vertical-align: top; text-shadow: 0px 0px 0.1em #eee; color: #000; margin-top: -0.3em;}
 .sidebar {box-sizing:border-box; z-index: -1; width:20em; height:100%; padding:2em; position: fixed; left: 0px; top:0; bottom:0; background: #333; color: #eee; box-shadow: -2px 0 5px #222 inset; }
 .sidebar ul {list-style: none; margin: 0;}
 .sidebar ul li a {color: #ddd !important; font-size: 1.5em;}
