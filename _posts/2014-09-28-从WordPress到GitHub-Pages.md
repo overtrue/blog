@@ -3,7 +3,7 @@ layout: post
 title: 从WordPress到GitHub Pages
 ---
 
-从10年开始玩博客，一直用WordPress，也自己写过一些主题与插件，比如：等。
+从10年开始玩博客，一直用WordPress，也自己写过一些主题与插件，比如：[wp auto top](https://wordpress.org/plugins/wp-auto-top/)（博客侧边滑动，返回顶部，查看评论的小工具）、[WP CN Excerpt](https://wordpress.org/plugins/cn-excerpt/)（WordPress高级摘要插件）、[Quick Adsense cn](https://wordpress.org/plugins/quick-adsense-cn/)（广告位管理插件）、[Let's kill IE6](https://wordpress.org/plugins/lets-kill-ie6/)（IE6用户提示用户升级浏览器）等。
 但是工作以来，发现没有太多时间去折腾它了，由其是在搬几次服务器以后数据被黑客弄丢了不少，然后就更没有信心去写博客了。从去年到今天，也终于完成了把博客从WordPress换成GitHub Pages这个计划，同时也换了新的网名`overtrue`和域名`overtrue.me`。
 
 说起`overtrue`这个名字，其实是之前在Yahoo台湾商城的时候公司的开发环境的密码中有它，后来觉得这名挺有意思的于是就用它做了GitHub账户名。
