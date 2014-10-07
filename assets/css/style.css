@@ -94,6 +94,11 @@ code[class*='language'] {white-space:nowrap;}
     .sidebar {padding:1em;}
     .nav-tabs{display: -webkit-box; -webkit-box-pack:justify; display: box; box-pack:justify; }
     .footer .links a {padding:0 5px; font-size: 12px;}
+    body {font-size: 12px;}
+    typo h1 {font-size: 1.4em;}
+    typo h2 {font-size: 1.2em;}
+    typo h3 {font-size: 1.1em;}
+    typo h4 {font-size: 1em;}
 }
 
 @media print {
