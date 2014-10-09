@@ -15,7 +15,8 @@ limit_posts: 0
 highlighter: pygments
 
 relative_permalinks: false
-
+url: http://overtrue.me
+baseurl:  http://overtrue.me
 permalink:     date
 paginate_path: 'page:num'
 
