@@ -14,7 +14,7 @@ limit_posts: 0
 #pygments:    true
 highlighter: pygments
 
-relative_permalinks: true
+relative_permalinks: false
 
 permalink:     date
 paginate_path: 'page:num'
