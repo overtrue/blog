@@ -14,6 +14,7 @@ limit_posts: 0
 #pygments:    true
 highlighter: pygments
 
+title: overtrue - 安正超博客
 relative_permalinks: false
 url: http://overtrue.me
 baseurl:  http://overtrue.me
