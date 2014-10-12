@@ -1,6 +1,6 @@
 var pageTitle = document.title;
 var pageUrl   = encodeURIComponent(window.location.href);
-var pageDesc  = $(document.head).find('[name="description"]').text() || pageTitle;
+var pageDesc  = $(document.head).find('[name="description"]').text();
 var firstImage = $(document).find('img:first');
 var pageImage = (firstImage) ? firstImage.attr('src') : '';
 
