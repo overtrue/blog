@@ -1,7 +1,8 @@
 var pageTitle = document.title;
 var pageUrl   = encodeURIComponent(window.location.href);
 var pageDesc  = $(document.head).find('[name="description"]').text() || pageTitle;
-var pageImage = (var img = $(document).find('img:first')) ? img[0].attr('src');
+var firstImage = $(document).find('img:first');
+var pageImage = (firstImage) ? firstImage[0].attr('src') : '';
 
 var  SNS ={
 	config:{
