@@ -1,11 +1,26 @@
 <script src="{{ site.url }}/assets/js/sns.js"></script>
 <div class="sns-share">
-    <button id="btn_share_sina">sina</button><br />
-        <button id="btn_shares_qq">qq</button><br />
-        <button id="btn_share_renren">renren</button><br />
-        <button id="btn_share_kaixin">kaixin</button><br />
-        <button id="btn_share_douban">douban</button><br />
-        <script type="text/javascript">
+    <button id="btn_share_sina">
+        <svg viewBox="0 0 100 100">
+            <use xlink:href="{{ site.url }}/assets/images/sns.svg#icon-iconfont-sina"></use>
+        </svg>
+    </button>
+    <button id="btn_shares_qq">
+        <svg viewBox="0 0 100 100">
+            <use xlink:href="{{ site.url }}/assets/images/sns.svg#icon-iconfont-qq"></use>
+        </svg>
+    </button>
+    <button id="btn_share_renren">
+        <svg viewBox="0 0 100 100">
+            <use xlink:href="{{ site.url }}/assets/images/sns.svg#icon-iconfont-renren"></use>
+        </svg>
+    </button>
+    <button id="btn_share_douban">
+        <svg viewBox="0 0 100 100">
+            <use xlink:href="{{ site.url }}/assets/images/sns.svg#icon-iconfont-douban"></use>
+        </svg>
+    </button>
+    <script type="text/javascript">
             function $(id){
                 return (typeof id ==='string') ? document.getElementById(id) : id;
             }
