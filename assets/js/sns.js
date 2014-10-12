@@ -1,46 +1,39 @@
+var pageTitle = document.title;
+var pageUrl   = encodeURIComponent(window.location.href);
+var pageDesc  = $(document.head).find('[name="description"]').text() || pageTitle;
+var pageImage = (var img = $(document).find('img:first')) ? img[0].attr('src');
+
 var  SNS ={
-	defaultConfig:{
-		sharedomain:'',
-		title:'',
-		description:'',
-		pic : '',
-		w:'_blank'
+	config:{
+		url    : '',
+		title  : '',
+		desc   : '',
+		pic    : '',
+		target : '_blank'
 	},
+
 	share:function(type){
-		var shareurl,sharetitle,sharepic,finalurl="";
+		var share_url,
+			url   = this.config.url || pageUrl,
+			title = this.config.title || pageTitle,
+			pic   = this.config.pic || pageImage,
+			desc  = this.config.desc || pageDesc;
+
 		switch(type){
 			case 1:
-				shareurl="http://service.weibo.com/share/share.php?url="+encodeURIComponent(this.defaultConfig.sharedomain);
-				sharetitle="&title="+encodeURIComponent(this.defaultConfig.description);
-				sharepic="&pic="+encodeURIComponent(this.defaultConfig.sharedomain+this.defaultConfig.pic);
-				finalurl=shareurl+sharetitle+sharepic;
+				share_url="http://service.weibo.com/share/share.php?url=" + url + "&title=" + title + desc + (pic ? "&pic=" + pic : '');
 			break;
 			case 2:
-				shareurl="http://share.v.t.qq.com/index.php?c=share&a=index&url="+encodeURIComponent(this.defaultConfig.sharedomain);
-				sharetitle="&title="+encodeURIComponent(this.defaultConfig.description);
-				sharepic="&pic="+encodeURIComponent(this.defaultConfig.sharedomain+this.defaultConfig.pic);
-				finalurl=shareurl+sharetitle+sharepic;
+				share_url="http://share.v.t.qq.com/index.php?c=share&a=index&url=" + url + "&title=" + title + desc + (pic ? "&pic=" + pic : '');
 			break;
 			case 3:
-				shareurl="http://widget.renren.com/dialog/share?resourceUrl="+encodeURIComponent(this.defaultConfig.sharedomain);
-				sharetitle="&title="+encodeURIComponent(this.title)+"&description="+encodeURIComponent(this.defaultConfig.description+""+this.defaultConfig.sharedomain);
-				sharepic="&pic="+encodeURIComponent(this.defaultConfig.sharedomain+this.defaultConfig.pic);
-				finalurl=shareurl+sharetitle+sharepic;
-			break;
-			case 4:
-				shareurl="http://www.kaixin001.com/rest/records.php?url="+encodeURIComponent(this.defaultConfig.sharedomain);
-				sharetitle="&content="+encodeURIComponent(this.defaultConfig.description);
-				sharepic="&pic="+encodeURIComponent(this.defaultConfig.sharedomain+this.defaultConfig.pic);
-				finalurl=shareurl+sharetitle+sharepic+"&starid=0&aid=0&style=11&stime=&sig=";
+				share_url="http://widget.renren.com/dialog/share?resourceUrl=" + url + "&title="+ title +"&description=" + desc + url + (pic ? "&pic=" + pic : '');
 			break;
 			case 5:
-				shareurl="http://shuo.douban.com/!service/share?href="+encodeURIComponent(this.defaultConfig.sharedomain);
-				sharetitle="&name="+encodeURIComponent(this.defaultConfig.title)+"&text="+encodeURIComponent(this.defaultConfig.description);
-				sharepic="&image="+encodeURIComponent(this.defaultConfig.sharedomain+this.defaultConfig.pic);
-				finalurl=shareurl+sharetitle+sharepic+"&starid=0&aid=0&style=11&stime=&sig=";
+				share_url="http://shuo.douban.com/!service/share?href=" + url + "&name=" + title + "&text=" + desc + ( pic ? "&image=" + pic : '') + '&starid=0&aid=0&style=11&stime=&sig=';
 			break;
 		}
-		console.log(finalurl);
+
 		this.openNew(finalurl);
 	},
 	getParamsOfShareWindow:function(width,height){
@@ -54,7 +47,7 @@ var  SNS ={
 	init:function(newConfig){
 		for(var i in newConfig){
 			if(newConfig[i]){
-				this.defaultConfig[i]=newConfig[i];
+				this.config[i]=newConfig[i];
 			}
 		}
 	}

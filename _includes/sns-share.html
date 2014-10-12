@@ -14,19 +14,7 @@
     </i>
     <script type="text/javascript">
         $(document).ready(function(){
-            var newConfig={
-                //分享URL
-                sharedomain:'{{ site.url }}{{ page.url }}',
-                //分享标题
-                title:'{{ page.title }}',
-                //分享文案
-                description:'{{ page.excerpt }}',
-                //分享图片相对路径
-                pic:'',
-                //分享新开窗口 默认_blank
-                w:''
-            };
-            SNS.init(newConfig);
+            SNS.init({});
             $('.sns-share i').click(function(){
                 SNS.share($(this).data('id'));
             });
