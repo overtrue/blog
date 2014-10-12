@@ -1,15 +1,15 @@
 <script src="{{ site.url }}/assets/js/sns.js"></script>
 <div class="sns-share">
-    <i id="btn_share_sina">
+    <i data-id="1">
         <svg><use xlink:href="{{ site.url }}/assets/images/sns.svg#icon-iconfont-sina" transform="translate(0 0)"></use></svg>
     </i>
-    <i id="btn_shares_qq">
+    <i data-id="2">
         <svg><use xlink:href="{{ site.url }}/assets/images/sns.svg#icon-iconfont-qq" transform="translate(0 0)"></use></svg>
     </i>
-    <i id="btn_share_renren">
+    <i data-id="3">
         <svg><use xlink:href="{{ site.url }}/assets/images/sns.svg#icon-iconfont-renren" transform="translate(0 0)"></use></svg>
     </i>
-    <i id="btn_share_douban">
+    <i data-id="5">
         <svg><use xlink:href="{{ site.url }}/assets/images/sns.svg#icon-iconfont-douban" transform="translate(0 0)"></use></svg>
     </i>
     <script type="text/javascript">
@@ -27,26 +27,10 @@
                 w:''
             };
             SNS.init(newConfig);
-            //新浪
-            $('btn_share_sina').onclick=function(){
-                SNS.share(1);
+            $('#btn_share_sina').onclick=function(){
+                SNS.share($(this).data('id'));
             };
-            //QQ
-            $('btn_shares_qq').onclick=function(){
-                SNS.share(2);
-            };
-            //人人
-            $('btn_share_renren').onclick=function(){
-                SNS.share(3);
-            };
-            //开心
-            $('btn_share_kaixin').onclick=function(){
-                SNS.share(4);
-            };
-            //豆瓣
-            $('btn_share_douban').onclick=function(){
-                SNS.share(5);
-            };
+
         });
         </script>
 </div>
