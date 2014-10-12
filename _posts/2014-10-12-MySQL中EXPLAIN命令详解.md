@@ -14,10 +14,10 @@ EXPLAIN SELECT `surname`,`first_name` FORM `a`,`b` WHERE `a`.`id`=`b`.`id`
 
 **EXPLAIN**列的解释：
 
-| 列 | 描述 |
+|  列  |  描述  |
 | ---- | ---- |
 | `table` | 显示这一行的数据是关于哪张表的。|
-| `type` | 这是重要的列，显示连接使用了何种类型。从最好到最差的连接类型为`const`、`eq_reg`、|`ref`、`range`、`index`和`ALL`。
+| `type` | 这是重要的列，显示连接使用了何种类型。从最好到最差的连接类型为`const`、`eq_reg`、`ref`、`range`、`index`和`ALL`。|
 | `possible_keys` | 显示可能应用在这张表中的索引。如果为空，没有可能的索引。可以为相关的域从`WHERE`语句中选择一个合适的语句。| 
 | `key` |  实际使用的索引。如果为`NULL`，则没有使用索引。很少的情况下，MySQL会选择优化不足的索引。这种情况下，可以在`SELECT`语句中使用`USE` INDEX（indexname）` 来强制使用一个索引或者用`IGNORE INDEX（indexname）`来强制MySQL忽略索引。|
 | `key_len` | 使用的索引的长度。在不损失精确性的情况下，长度越短越好。 |
