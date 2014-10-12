@@ -11,6 +11,7 @@ EXPLAIN显示了MySQL如何使用索引来处理SELECT语句以及连接表。�
 ```sql
 EXPLAIN SELECT `surname`,`first_name` FORM `a`,`b` WHERE `a`.`id`=`b`.`id` 
 ```
+
 **EXPLAIN**列的解释：
 
 | 列 | 描述 |
