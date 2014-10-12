@@ -92,7 +92,7 @@ code { background-color: rgba(0,0,0,0.04); border-radius: 3px; padding:0 3px; fo
 
 /* sns share */
 .sns-share {padding: 10px 0;}
-.sns-share i {display: inline-block; margin:3px;}
+.sns-share i {display: inline-block; margin-right:6px;}
 .sns-share i svg {width: 32px; height: 32px;}
 .icon {
     display: inline-block;
