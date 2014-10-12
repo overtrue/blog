@@ -9,7 +9,7 @@ EXPLAIN SELECT `surname`,`first_name` FORM `a`,`b` WHERE `a`.`id`=`b`.`id`
 **EXPLAIN**列的解释：
 
 | 列 | 描述 |
-| ---- | --- |
+| ---- | ---- |
 | `table` | 显示这一行的数据是关于哪张表的。|
 | `type` | 这是重要的列，显示连接使用了何种类型。从最好到最差的连接类型为`const`、`eq_reg`、|`ref`、`range`、`index`和`ALL`。
 | `possible_keys` | 显示可能应用在这张表中的索引。如果为空，没有可能的索引。可以为相关的域从`WHERE`语句中选择一个合适的语句。| 
@@ -22,7 +22,7 @@ EXPLAIN SELECT `surname`,`first_name` FORM `a`,`b` WHERE `a`.`id`=`b`.`id`
 **extra列返回的描述的意义：**
 
 | 值 | 意义 |
-| -- | -- |
+| ---- | ---- |
 | `Distinct` | 一旦MySQL找到了与行相联合匹配的行，就不再搜索了。 |
 | `Not exists` | MySQL优化了`LEFT JOIN`，一旦它找到了匹配`LEFT JOIN`标准的行，就不再搜索了。| 
 | `Range checked for each Record（index map:#）` | 没有找到理想的索引，因此对于从前面表中来的每一个行组合，MySQL检查使用哪个索引，并用它来从表中返回行。这是使用索引的最慢的连接之一。|
