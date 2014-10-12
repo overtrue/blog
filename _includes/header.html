@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>{{ page.title }} - {{ site.title }}</title>
     <meta name="keywords" content="{{ page.keywords | escape }}">
-    <meta name="description" content="{{ page.excerpt | strip_tag }}">
+    <meta name="description" content="{{ page.excerpt | strip_html }}">
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/ionicons.min.css">
     <link rel="stylesheet" href="/assets/css/typo.css">
