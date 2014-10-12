@@ -40,6 +40,7 @@ var  SNS ={
 				finalurl=shareurl+sharetitle+sharepic+"&starid=0&aid=0&style=11&stime=&sig=";
 			break;
 		}
+		console.log(finalurl);
 		this.openNew(finalurl);
 	},
 	getParamsOfShareWindow:function(width,height){
