@@ -3,8 +3,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>{{ page.title }} - {{ site.title }}</title>
-    <meta name="keywords" content="{{ page.keywords | escape }}">
-    <meta name="description" content="{{ page.excerpt | strip_html }}">
+    <meta name="keywords" content="{{ page.keywords | strip | strip_html  }}">
+    <meta name="description" content="{{ page.excerpt | strip | strip_html }}">
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/ionicons.min.css">
     <link rel="stylesheet" href="/assets/css/typo.css">
