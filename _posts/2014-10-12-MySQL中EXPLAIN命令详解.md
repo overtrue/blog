@@ -17,13 +17,13 @@ EXPLAIN SELECT `surname`,`first_name` FORM `a`,`b` WHERE `a`.`id`=`b`.`id`
 |  列  |  描述  |
 | ---- | ---- |
 | `table` | 显示这一行的数据是关于哪张表的。|
-| `type` | 这是重要的列，显示连接使用了何种类型。从最好到最差的连接类型为`const`、`eq_reg`、`ref`、`range`、`index`和`ALL`。|
-| `possible_keys` | 显示可能应用在这张表中的索引。如果为空，没有可能的索引。可以为相关的域从`WHERE`语句中选择一个合适的语句。| 
-| `key` |  实际使用的索引。如果为`NULL`，则没有使用索引。很少的情况下，MySQL会选择优化不足的索引。这种情况下，可以在`SELECT`语句中使用`USE` INDEX（indexname）` 来强制使用一个索引或者用`IGNORE INDEX（indexname）`来强制MySQL忽略索引。|
-| `key_len` | 使用的索引的长度。在不损失精确性的情况下，长度越短越好。 |
+| `type` | 这是重要的列，显示连接使用了何种类型。从最好到最差的连接类型为`const`、`eq_reg`、`ref`、`range`、`index`和`ALL`。 |
+| `possible_keys` | 显示可能应用在这张表中的索引。如果为空，没有可能的索引。可以为相关的域从`WHERE`语句中选择一个合适的语句。 | 
+| `key` |  实际使用的索引。如果为`NULL`，则没有使用索引。很少的情况下，MySQL会选择优化不足的索引。这种情况下，可以在`SELECT`语句中使用`USE` INDEX（indexname）` 来强制使用一个索引或者用`IGNORE INDEX（indexname）`来强制MySQL忽略索引。 |
+| `key_len` | 使用的索引的长度。在不损失精确性的情况下，长度越短越好。  |
 | `ref` | 显示索引的哪一列被使用了，如果可能的话，是一个常数。 | 
 | `rows` | MySQL认为必须检查的用来返回请求数据的行数。 |
-| `Extra` | 关于MySQL如何解析查询的额外信息。将在表4.3中讨论，但这里可以看到的坏的例子是`Using temporary`和`Using filesort`，意思MySQL根本不能使用索引，结果是检索会很慢。 |
+| `Extra` | 关于MySQL如何解析查询的额外信息。将在表4.3中讨论，但这里可以看到的坏的例子是`Using temporary`和`Using filesort`，意思MySQL根本不能使用索引，结果是检索会很慢。  |
 
 **extra列返回的描述的意义：**
 
