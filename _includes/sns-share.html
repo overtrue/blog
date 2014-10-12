@@ -21,9 +21,7 @@
         </svg>
     </button>
     <script type="text/javascript">
-            function $(id){
-                return (typeof id ==='string') ? document.getElementById(id) : id;
-            }
+        $(document).ready(function(){
             var newConfig={
                 //分享URL
                 sharedomain:'',
@@ -57,5 +55,6 @@
             $('btn_share_douban').onclick=function(){
                 SNS.share(5);
             };
+        });
         </script>
 </div>
