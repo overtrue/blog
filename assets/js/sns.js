@@ -2,7 +2,7 @@ var pageTitle = document.title;
 var pageUrl   = encodeURIComponent(window.location.href);
 var pageDesc  = $(document.head).find('[name="description"]').text() || pageTitle;
 var firstImage = $(document).find('img:first');
-var pageImage = (firstImage) ? firstImage[0].attr('src') : '';
+var pageImage = (firstImage) ? firstImage.attr('src') : '';
 
 var  SNS ={
 	config:{
