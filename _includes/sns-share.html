@@ -16,11 +16,11 @@
         $(document).ready(function(){
             var newConfig={
                 //分享URL
-                sharedomain:'',
+                sharedomain:'{{ site.url }}{{ page.url }}',
                 //分享标题
-                title:'',
+                title:'{{ page.title }}',
                 //分享文案
-                description:'',
+                description:'{{ page.excerpt }}',
                 //分享图片相对路径
                 pic:'',
                 //分享新开窗口 默认_blank
