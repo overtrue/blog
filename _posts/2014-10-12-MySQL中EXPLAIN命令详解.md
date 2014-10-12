@@ -1,3 +1,8 @@
+---
+layout: post
+title: MySQL中EXPLAIN命令详解
+---
+
 EXPLAIN显示了MySQL如何使用索引来处理SELECT语句以及连接表。可以帮助选择更好的索引和写出更优化的查询语句。
 
 使用方法，在select语句前加上`EXPLAIN`就可以了：
