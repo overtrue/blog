@@ -35,7 +35,7 @@ var  SNS ={
 			break;
 		}
 
-		this.openNew(finalurl);
+		this.openNew(share_url);
 	},
 	getParamsOfShareWindow:function(width,height){
 		var top=(document.body.clientHeight-height)/2;
