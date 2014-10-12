@@ -91,6 +91,8 @@ code { background-color: rgba(0,0,0,0.04); border-radius: 3px; padding:0 3px; fo
 }
 
 /* sns share */
+.sns-share {padding: 10px 0;}
+.sns-share i {display: inline-block; margin:3px;}
 .icon {
     display: inline-block;
     width: 32px;
