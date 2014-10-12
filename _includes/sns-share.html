@@ -1,0 +1,45 @@
+<div class="sns-share">
+    <button id="btn_share_sina">sina</button><br />
+        <button id="btn_shares_qq">qq</button><br />
+        <button id="btn_share_renren">renren</button><br />
+        <button id="btn_share_kaixin">kaixin</button><br />
+        <button id="btn_share_douban">douban</button><br />
+        <script type="text/javascript">
+            function $(id){
+                return (typeof id ==='string') ? document.getElementById(id) : id;
+            }
+            var newConfig={
+                //分享URL
+                sharedomain:'',
+                //分享标题
+                title:'',
+                //分享文案
+                description:'',
+                //分享图片相对路径
+                pic:'',
+                //分享新开窗口 默认_blank
+                w:''
+            };
+            SNS.init(newConfig);
+            //新浪
+            $('btn_share_sina').onclick=function(){
+                SNS.share(1);
+            };
+            //QQ
+            $('btn_shares_qq').onclick=function(){
+                SNS.share(2);
+            };
+            //人人
+            $('btn_share_renren').onclick=function(){
+                SNS.share(3);
+            };
+            //开心
+            $('btn_share_kaixin').onclick=function(){
+                SNS.share(4);
+            };
+            //豆瓣
+            $('btn_share_douban').onclick=function(){
+                SNS.share(5);
+            };
+        </script>
+</div>
