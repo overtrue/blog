@@ -26,18 +26,19 @@ var  SNS ={
 		switch(type){
 			case 'sina':
 				share_url="http://service.weibo.com/share/share.php?url=" + url + "&title=" + title + desc + (pic ? "&pic=" + pic : '');
-			break;
+				break;
 			case 'qq':
 				share_url="http://share.v.t.qq.com/index.php?c=share&a=index&url=" + url + "&title=" + title + desc + (pic ? "&pic=" + pic : '');
-			break;
+				break;
 			case 'qzone':
 				share_url="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + url + "&title=" + title + "&desc=" + desc + "&summary=" + desc + "&site=" + site + (pic? pic : '');
+				break;
 			case 'renren':
 				share_url="http://widget.renren.com/dialog/share?resourceUrl=" + url + "&title="+ title +"&description=" + desc + url + (pic ? "&pic=" + pic : '');
-			break;
+				break;
 			case 'douban':
 				share_url="http://shuo.douban.com/!service/share?href=" + url + "&name=" + title + "&text=" + desc + ( pic ? "&image=" + pic : '') + '&starid=0&aid=0&style=11&stime=&sig=';
-			break;
+				break;
 		}
 
 		this.openNew(share_url);
