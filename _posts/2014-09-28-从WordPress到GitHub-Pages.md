@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 从WordPress到GitHub Pages
+url: form-wordpress-to-github-pages
 ---
 
 从10年开始玩博客，一直用WordPress，也自己写过一些主题与插件，比如：[wp auto top](https://wordpress.org/plugins/wp-auto-top/)（博客侧边滑动，返回顶部，查看评论的小工具）、[WP CN Excerpt](https://wordpress.org/plugins/cn-excerpt/)（WordPress高级摘要插件）、[Quick Adsense cn](https://wordpress.org/plugins/quick-adsense-cn/)（广告位管理插件）、[Let's kill IE6](https://wordpress.org/plugins/lets-kill-ie6/)（IE6用户提示用户升级浏览器）等。

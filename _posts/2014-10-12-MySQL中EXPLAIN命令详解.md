@@ -1,6 +1,7 @@
 ---
 layout: post
 title: MySQL中EXPLAIN命令详解
+url: mysql-explain
 ---
 
 EXPLAIN显示了MySQL如何使用索引来处理SELECT语句以及连接表。可以帮助选择更好的索引和写出更优化的查询语句。
