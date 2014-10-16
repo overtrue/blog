@@ -1,6 +1,5 @@
 ---
 layout: post
-permalink: principle-of-php-variable
 title: PHP的弱类型实现
 excerpt: PHP中的弱类型变量的实现原理。
 ---

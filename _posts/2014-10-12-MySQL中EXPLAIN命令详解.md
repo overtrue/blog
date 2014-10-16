@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL中EXPLAIN命令详解
+permalink: MySQL中EXPLAIN命令详解
 url: mysql-explain
 ---
 
