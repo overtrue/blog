@@ -1,12 +1,14 @@
-{% if page.keywords == '' %}{% assign page.keywords = site.keywords %}{%endif%}
-{% if page.description == '' %}{% assign page.description = site.description %}{%endif%}
+{% assign keywords = page.keywords %}
+{% assign description = page.excerpt %}
+{% if keywords == '' %}{% assign keywords = site.keywords %}{%endif%}
+{% if description == '' %}{% assign description = site.description %}{%endif%}
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>{{ page.title }} - {{ site.title }}</title>
-    <meta name="keywords" content="{{ page.keywords | strip_html | strip}}">
-    <meta name="description" content="{{ page.excerpt | strip_html | strip}}">
+    <meta name="keywords" content="{{ keywords | strip_html | strip}}">
+    <meta name="description" content="{{ description | strip_html | strip}}">
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/ionicons.min.css">
     <link rel="stylesheet" href="/assets/css/typo.css">
