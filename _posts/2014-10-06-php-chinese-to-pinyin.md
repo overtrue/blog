@@ -15,7 +15,7 @@ excerpt: 到目前为止这可能是最准确的一个解决方案了，大GitHu
 [Pinyin](http://overtrue.me/pinyin)
 ======
 
-主页：http://overtrue.me/pinyin
+主页：[http://overtrue.me/pinyin](http://overtrue.me/pinyin)
 
 基于CC-CEDICT词典的中文转拼音工具, 更准确的汉字转拼音解决方案。 [CC-CEDICT](http://cc-cedict.org/wiki/).
 
