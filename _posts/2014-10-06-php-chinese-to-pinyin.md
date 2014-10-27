@@ -12,8 +12,10 @@ excerpt: 到目前为止这可能是最准确的一个解决方案了，大GitHu
 - 添加补充词典，解决CC-CEDICT不全或者不准确的问题；
 - 添加词频表，根据使用频率再一步提高多音字的准确度；
 
-Pinyin
+[Pinyin](http://overtrue.me/pinyin)
 ======
+
+主页：http://overtrue.me/pinyin
 
 基于CC-CEDICT词典的中文转拼音工具, 更准确的汉字转拼音解决方案。 [CC-CEDICT](http://cc-cedict.org/wiki/).
 
