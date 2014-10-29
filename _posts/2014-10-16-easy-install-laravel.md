@@ -12,4 +12,12 @@ excerpt: 一个专门解决你不会装composer、不会装openssl，不会翻�
 
 对了！别忘记点 [star](https://github.com/overtrue/latest-laravel) :yum:
 
+## 赞助
+本项目运行在DigitalOcean机器上，如果您觉得对你有帮助愿意捐助的话有两种方式：
+
+1. 我的支付宝：anzhengchao@gmail.com
+2. 直接转到我的PayPal：anzhengchao@gmail.com
+
+请留下您的名称或者联系方式，感谢！
+
 Happy coding!
