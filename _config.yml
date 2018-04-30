@@ -158,7 +158,7 @@ url:            https://overtrue.me
 #
 # Used by Safari mask-icon, Chrome Web App theme color
 colors:
-  theme:        "#ff00b4"
+  theme:        "#5477F8"
   background:   "#fff"
 
 # Service Worker Precache
