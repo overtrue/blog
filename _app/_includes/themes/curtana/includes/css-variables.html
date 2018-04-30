@@ -1,0 +1,129 @@
+<!-- Post specified styles -->
+<style data-assets-inline>
+  /*
+    TODO: You have to speicify background color for `html` in order to make `-webkit-filter` work
+    Link: https://bugs.chromium.org/p/chromium/issues/detail?id=591015
+    Date: Mar 1, 2016, 5:41 PM
+  */
+  html {
+    {% if page.scheme-bg %}
+    background-color: {{ page.scheme-bg }};
+    {% endif %}
+  }
+
+  body {
+    {% if page.scheme-text %}
+    color: {{ page.scheme-text }};
+    {% endif %}
+
+    {% if page.scheme-bg %}
+    background-color: {{ page.scheme-bg }};
+    {% endif %}
+
+    {% if page.scheme-bg-img %}
+      {% assign first = true %}
+      background-image:
+        {% for image in page.scheme-bg-img %}
+          {% unless first %},{% endunless %}
+          {% if page.scheme-bg-img-local == true %}
+            url("{{ amsf_user_assets }}/{{ page.scheme-bg-img[forloop.index0] }}")
+          {% else %}
+            url("{{ site.file }}/{{ page.scheme-bg-img[forloop.index0] }}")
+          {% endif %}
+          {% assign first = false %}
+        {% endfor %}
+      ;
+    {% endif %}
+  }
+
+  {% if page.scheme-text %}
+  a,
+  button {
+    color: {{ page.scheme-text }};
+  }
+  {% endif %}
+
+  {% if page.scheme-link %}
+  ::selection {
+    color: {{ page.scheme-link }};
+  }
+  {% endif %}
+
+  {% if page.scheme-hover %}
+  .navigation li a:hover,
+  .navigation li a:focus {
+    color: {{ page.scheme-hover }};
+  }
+  {% endif %}
+
+  {% if page.scheme-hero-bg %}
+  .content header {
+    background: {{ page.scheme-hero-bg }};
+  }
+  {% endif %}
+  {% if page.scheme-hero-text %}
+  .content header {
+    color: {{ page.scheme-hero-text }};
+  }
+  {% endif %}
+    {% if page.scheme-hero-link %}
+    .content header a {
+      color: {{ page.scheme-hero-link }};
+    }
+    .content header .external .dot {
+      background: {{ page.scheme-hero-link }};
+    }
+    {% endif %}
+
+  {% if page.scheme-link %}
+  .current a {
+    color: {{ page.scheme-link }};
+  }
+
+  .content a {
+    color: {{ page.scheme-link }};
+  }
+  {% endif %}
+
+  {% if page.scheme-code %}
+  .content code,
+  .content pre {
+    color: {{ page.scheme-code }};
+  }
+  {% endif %}
+
+  /*
+    TODO: Need a better solution. I have to redefine the whole box-shadow here because no invidual box-shadow-color exists
+    Date: Mar 12, 2016, 12:09 AM
+  */
+  {% if page.scheme-text %}
+  .content hr::before,
+  .footnotes::before {
+    background: {{ page.scheme-text }};
+    box-shadow: 24px 0 0 0 {{ page.scheme-text }}, -24px 0 0 0 {{ page.scheme-text }};
+  }
+  {% endif %}
+
+  {% if page.scheme-text and page.scheme-link %}
+  .note,
+  .store,
+  .download {
+    border-left-color: {{ page.scheme-link }};
+  }
+  {% endif %}
+
+  {% if page.scheme-link %}
+  .external .dot {
+    background: {{ page.scheme-link }};
+  }
+  {% endif %}
+
+  {% if page.scheme-hover %}
+  :target [rev=footnote],
+  :target [rel=footnote],
+  :target .reversefootnote,
+  :target .footnote {
+    color: {{ page.scheme-hover }};
+  }
+  {% endif %}
+</style>

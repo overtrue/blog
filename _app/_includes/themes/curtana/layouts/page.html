@@ -1,0 +1,25 @@
+<!-- Page-wide custom CSS -->
+{{ amsf_page_css }}
+
+<!-- Article wrapper, limit width -->
+<article {{ amsf_page_lang }}>
+
+  <!-- Page title -->
+  <header {{ amsf_page_heading_bg }}>
+
+    <h1 class="{{ amsf_page_heading_class }}" title="{{ page.title | strip_html | xml_escape }}" data-title="{{ page.title | strip_html | xml_escape }}">
+      {{ amsf_page_heading }}
+    </h1>
+
+    {% if page.desc %}
+      <small>{{ page.desc }}</small>
+    {% endif %}
+
+  </header>
+
+  <!-- Page content -->
+  <div class="page-content">
+    {{ content }}
+  </div>
+
+</article>

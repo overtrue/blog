@@ -1,0 +1,49 @@
+<!-- Post-wide custom CSS -->
+{{ amsf_page_css }}
+
+<!-- Article wrapper, limit width -->
+<article {{ amsf_page_lang }}>
+
+  <!-- Post title -->
+  <header {{ amsf_page_heading_bg }}>
+
+    <h1 class="{{ amsf_page_heading_class }}" title="{{ page.title | strip_html | xml_escape }}" data-title="{{ page.title | strip_html | xml_escape }}">
+      {{ amsf_page_heading }}
+    </h1>
+
+    {% if page.date %}
+      <small>
+        By <span rel="author">{{ author.name }}</span>
+        on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+      </small>
+    {% endif %}
+
+    {% if page.desc %}
+      <small>{{ page.desc }}</small>
+    {% endif %}
+
+  </header>
+
+  <!-- Post content -->
+  <div class="post-content">
+    {{ content }}
+
+    {% assign date_publish = page.date | date: "%b %-d, %Y" %}
+    {% assign date_update  = page.last_modified_at | date: "%b %-d, %Y" %}
+
+    {% if date_publish != date_update and site.dev == false %}
+      <footer class="post-modified-date">
+        <p>
+          Updated
+          <time datetime="{{ page.last_modified_at | date: " %FT%X+08:00 " }}">
+            {{ page.last_modified_at | date: "%A, %b %d, %Y" }}
+          </time>
+        </p>
+      </footer>
+    {% endif %}
+  </div>
+</article>
+
+<div class="post-comments">
+{% include amsf/comment %}
+</div>

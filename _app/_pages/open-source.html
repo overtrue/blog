@@ -1,0 +1,115 @@
+---
+layout: default
+title: 开源项目
+keywords: 开源,open-source,GitHub,php,overtrue,开源项目
+description: 开源改变世界，多多少于参与与创建了一些开源项目，希望在开源这条路上能做出更大更多的贡献。
+menu: Open-Source
+permalink: /open-source/
+---
+
+{% include amsf/core %}
+<header class="text-center">
+    <h1>开源项目</h1>
+    <h2 class="sub-title repo-count">Loading...</h2>
+</header>
+
+<div class="page-content repo-list">
+    <div class="blankslate">
+        <h3>Loading...</h3>
+    </div>
+</div>
+
+<div id="repo-template" style="display:none">
+    <section class="list">
+        <h2>
+            <span class="meta-info tooltipped tooltipped-n [repo.language]" aria-label="[repo.language] project">[repo.language]</span>&#x30FB;
+            <span class="meta-info tooltipped tooltipped-n" aria-label="[repo.stargazers_count] stars">{% octicon star %} [repo.stargazers_count]</span>&#x30FB;
+            <span class="meta-info tooltipped tooltipped-n" aria-label="[repo.forks_count] forks">{% octicon repo-forked %} [repo.forks_count]</span>&#x30FB;
+            <span class="meta-info tooltipped tooltipped-n" aria-label="最后更新于：[repo.updated_at]">{% octicon clock %} <time datetime="[repo.updated_at]" class="timeago" title="[repo.updated_at]">[repo.updated_at]</time></span>
+        </h2>
+        <a href="[repo.html_url]" target="_blank">
+            <h1 class="collection-card-title">[repo.name]</h1>
+        </a>
+        <p class="sub-title">[repo.description]</p>
+    </section>
+</div>
+<script src="https://cdn.bootcss.com/underscore.js/1.9.0/underscore-min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-timeago/1.6.3/jquery.timeago.min.js"></script>
+<script>
+    jQuery(document).ready(function($){
+        var repoListWrap = $('.repo-list');
+        var repoList = $('<div class="clearfix"></div>');
+        var repoCount = 0;
+
+        var localDict = function(number, index, totalSec) {
+          return [
+            ['刚刚', '片刻后'],
+            ['%s秒前', '%s秒后'],
+            ['1分钟前', '1分钟后'],
+            ['%s分钟前', '%s分钟后'],
+            ['1小时前', '1小时后'],
+            ['%s小时前', '%s小时后'],
+            ['1天前', '1天后'],
+            ['%s天前', '%s天后'],
+            ['1周前', '1周后'],
+            ['%s周前', '%s周后'],
+            ['1月前', '1月后'],
+            ['%s月前', '%s月后'],
+            ['1年前', '1年后'],
+            ['%s年前', '%s年后']
+          ][index];
+        };
+
+        jQuery.timeago.settings.strings = {
+            prefixAgo: null,
+            prefixFromNow: null,
+            suffixAgo: "前",
+            suffixFromNow: "后",
+            seconds: "1分钟",
+            minute: "1分钟",
+            minutes: "%d分钟",
+            hour: "1小时",
+            hours: "%d小时",
+            day: "1天",
+            days: "%d天",
+            month: "1个月",
+            months: "%d月",
+            year: "1年",
+            years: "%d年",
+            numbers: [],
+            wordSeparator: ""
+          }
+
+        $.get('https://api.github.com/users/overtrue/repos?type=owner&per_page=100',
+          function(repos){
+            if (!repos) {
+              repoListWrap.html('<div class="blankslate"><h3>加载失败</h3><p>请刷新或稍后再试...</p></div>');
+            };
+
+            repos = _.sortBy(repos, function(repo){
+                return - (repo.stargazers_count + repo.forks_count + repo.watchers_count);
+            });
+
+            repos.forEach(function(repo){
+                if (repo.fork) return;
+                repoCount++;
+
+                repo.updated_at = (new Date(repo.updated_at)).toISOString();
+                repo.language = repo.language || 'unknown';
+                repo.description = (repo.description || '').replace(new RegExp(':.*?:', 'g'), '')
+
+                var repoTemplate = $('#repo-template').html();
+                var item = repoTemplate.replace(/\[(.*?)\]/g, function(){
+                    return eval(arguments[1]);
+                });
+
+                repoList.append(item);
+            });
+
+            repoListWrap.html(repoList);
+            $('.repo-count').html('共 '+ repos.length +' 个开源项目');
+            $("time.timeago").timeago();
+        });
+    });
+</script>

@@ -1,0 +1,44 @@
+<!-- Footer section -->
+{% unless page.permalink == '/' and site.data.curtana.clean_homepage %}
+  <footer class="footer">
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">{{ site.name }}</a></li>
+
+      {% if site.credits %}
+        <li><a href="https://sparanoid.com/lab/amsf/" title="Almace Scaffolding">AMSF</a></li>
+        <li><a href="{{ site.data.curtana.meta.url }}" title="{{ site.data.curtana.meta.name }}">{{ site.data.curtana.meta.name }}</a></li>
+      {% endif %}
+
+      {% if site.data.curtana.subscription %}
+        <li><a href="{{ '/email-signup' | relative_url }}/">Email</a></li>
+      {% endif %}
+    </ul>
+  </footer>
+{% endunless %}
+
+<!-- Theme scripts -->
+<script src="{{ '/js/app.js?assets-inline' | prepend: amsf_theme_assets }}"></script>
+
+<!-- User scripts -->
+<script src="{{ '/js/user.js?assets-inline' | prepend: amsf_user_assets }}"></script>
+
+<!-- Lightense Images -->
+{% if page.plugin == 'lightense' %}
+  <script src="{{ '/js/lightense.min.js?assets-inline' | prepend: amsf_theme_assets }}"></script>
+  <script>
+    window.addEventListener('load', function () {
+      Lightense('p > img:not(.no-lightense),.lightense');
+    }, false);
+  </script>
+{% endif %}
+
+<!-- Service Worker  -->
+{{ amsf_service_worker }}
+
+<!-- Google Analytics -->
+{{ amsf_google_analytics }}
+
+<!-- Foot hooks -->
+{% if page.foot %}
+  {{ page.foot }}
+{% endif %}

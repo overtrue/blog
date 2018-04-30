@@ -1,0 +1,33 @@
+#
+# Jekyll basic configurations
+#
+
+# Expose site to local network
+host:           127.0.0.1
+
+# Re-include theme example pages for development
+exclude:        []
+
+# Disalbe custom plugins (jekyll-last-modified-at) for better performance
+plugins:
+  - jekyll-last-modified-at
+  - match_regex
+  - jemoji
+  - jekyll-octicons
+  - jekyll-paginate
+
+#
+# Almace Scaffolding settings
+#
+
+# Enable development mode
+dev:            true
+
+# Reset base to / for localhost development
+baseurl:        ""
+
+# CDN location for development
+file:           //
+
+# Force UTF-8 since local server doesn't send charset in their respond header
+force_utf_8:    true

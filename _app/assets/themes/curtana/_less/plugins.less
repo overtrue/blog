@@ -1,0 +1,75 @@
+//
+// Plugins
+// --------------------------------------------------
+
+// GitHub Gist
+.gist {
+  font-size: 80% !important;
+
+  code, pre {
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+  }
+
+  .gist-data {
+    font-family: @fontstack-monospace !important;
+
+    .file-data {
+      font-size: 100% !important;
+
+      > table {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  // Monospace fonts look bigger than normal fonts, so make it smaller.
+  .highlight {
+    font-size: 90% !important;
+  }
+
+  .markdown-body {
+    font-size: 100% !important;
+    padding: 1em !important;
+  }
+}
+
+
+//
+// Gitalk
+//
+.post-comments {
+    margin-top: 50px;
+  .gt-container {
+    .gt-header-controls-tip {
+      color: #000;
+      opacity: 0.5;
+    }
+    .gt-svg svg {
+      fill: #000;
+    }
+    .gt-comment-content，.gt-comment-admin .gt-comment-content {
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+    .gt-header-textarea {
+      border-radius: 0;
+    }
+    .gt-link {
+      border: none;
+    }
+    .gt-btn {
+      border-radius: 0;
+      background-color: #3c3c3c;
+
+      &:hover {
+        background-color: #0c0c0c;
+      }
+    }
+    .gt-avatar {
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+}
