@@ -19,12 +19,24 @@
 #     blah: blah
 rsync:
   default:
-    user: root
+    user: rsync
     port: 22
-    host: overtrue.me
-    dest: /www/overtrue.me/
+    host: caladbolg.sparanoid.com
+    dest: /srv/www/dev.sparanoid.com/public_html
     # Extra rsync parameters
     # I use `--exclude` here to prevent additional files from being deleted on
     # the server (rsync --delete), these files and directories are available on
     # the remote server but outside this git repo. So I need to ignore them.
-    params: --exclude=lab --exclude=s3_website.yml
+    params: --exclude=lab
+  prod:
+    user: sparanoid
+    port: 22
+    host: caladbolg.sparanoid.com
+    dest: /srv/www/sparanoid.com/public_html
+    # Extra rsync parameters
+    # I use `--rsync-path` here to run `rsync` with sudo permission.
+    params: --rsync-path="sudo rsync" --exclude=lab
+
+sparanoid:
+  default:
+    dest: ~/Git/sparanoid.com-prod

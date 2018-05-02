@@ -9,7 +9,7 @@ permalink: /open-source/
 
 {% include amsf/core %}
 <header class="text-center">
-    <h1>开源项目</h1>
+    <h1>Open-Source</h1>
     <h2 class="sub-title repo-count">Loading...</h2>
 </header>
 
@@ -21,16 +21,14 @@ permalink: /open-source/
 
 <div id="repo-template" style="display:none">
     <section class="list">
-        <h2>
-            <span class="meta-info tooltipped tooltipped-n [repo.language]" aria-label="[repo.language] project">[repo.language]</span>&#x30FB;
-            <span class="meta-info tooltipped tooltipped-n" aria-label="[repo.stargazers_count] stars">{% octicon star %} [repo.stargazers_count]</span>&#x30FB;
-            <span class="meta-info tooltipped tooltipped-n" aria-label="[repo.forks_count] forks">{% octicon repo-forked %} [repo.forks_count]</span>&#x30FB;
-            <span class="meta-info tooltipped tooltipped-n" aria-label="最后更新于：[repo.updated_at]">{% octicon clock %} <time datetime="[repo.updated_at]" class="timeago" title="[repo.updated_at]">[repo.updated_at]</time></span>
-        </h2>
-        <a href="[repo.html_url]" target="_blank">
-            <h1 class="collection-card-title">[repo.name]</h1>
-        </a>
+        <h1><a href="[repo.html_url]" target="_blank">[repo.name]</a></h1>
         <p class="sub-title">[repo.description]</p>
+        <h2 class="meta">
+            <span aria-label="[repo.language] project">[repo.language]</span>&#x30FB;
+            <span aria-label="[repo.stargazers_count] stars">{% octicon star %} [repo.stargazers_count]</span>&#x30FB;
+            <span aria-label="[repo.forks_count] forks">{% octicon repo-forked %} [repo.forks_count]</span>&#x30FB;
+            <span aria-label="最后更新于：[repo.updated_at]">{% octicon clock %} <time datetime="[repo.updated_at]" class="timeago" title="[repo.updated_at]">[repo.updated_at]</time></span>
+        </h2>
     </section>
 </div>
 <script src="https://cdn.bootcss.com/underscore.js/1.9.0/underscore-min.js"></script>
