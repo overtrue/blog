@@ -44,6 +44,10 @@
 //
 @link-color: #5477F8;
 
+body {
+  position: relative;
+}
+
 .content {
   .list {
     h1 {
@@ -77,8 +81,28 @@ h2.meta {
 //
 // Gitalk
 //
-.post-comments {
-    margin-top: 60px;
+#page-comments {
+  margin-top: 60px;
+  margin-left: -24vw;
+  width: 100vw;
+  padding: 40px 24vw;
+  background: #fafafa;
+
+  a:hover {
+    border-bottom: none !important;
+  }
+
+  .gt-header {
+    position: relative;
+    display: flex;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,.09);
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-top: 5px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.03);
+  }
   .gt-container {
     .gt-header-controls-tip {
       color: #000;
@@ -87,28 +111,66 @@ h2.meta {
     .gt-svg svg {
       fill: #000;
     }
-    .gt-comment-content，.gt-comment-admin .gt-comment-content {
-      background-color: rgba(0, 0, 0, 0.02);
+    .gt-comment-admin .gt-comment-content {
+      background-color: transparent;
+    }
+
+    .gt-comment-content:hover {
+      box-shadow: none;
+    }
+
+    .gt-comment {
+      margin-top: 20px;
+      padding: 20px;
+      background: #fff;
+      -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.04);
+      box-shadow: 0 1px 4px rgba(0,0,0,.04);
+      border: 1px solid rgba(0,0,0,.09);
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
     }
     .gt-header-textarea {
+      background-color: transparent;
+      border: none;
       border-radius: 0;
     }
     .gt-link {
       border: none;
     }
     .gt-btn {
-      border-radius: 0;
-      background-color: #3c3c3c;
+      background: transparent;
+      color: #555;
+      border: 1px solid #555;
+      border-radius: 3px;
 
       &:hover {
-        background-color: #0c0c0c;
+        background-color: #fafafa;
       }
     }
     .gt-avatar {
+      border-radius: 100%;
+      overflow: hidden;
       img {
         margin: 0 auto;
       }
     }
   }
 }
+
+@media (max-width: 1080px) {
+  #page-comments {
+    margin-top: 30px;
+    margin-left: -8vw;
+    padding: 20px 8vw;
+  }
+}
+
+@media (max-width: 640px) {
+  #page-comments {
+    margin-top: 30px;
+    margin-left: -4vw;
+    padding: 20px 4vw;
+  }
+}
+
 
