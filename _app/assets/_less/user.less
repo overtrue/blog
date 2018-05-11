@@ -111,8 +111,13 @@ h2.meta {
     .gt-svg svg {
       fill: #000;
     }
-    .gt-comment-admin .gt-comment-content {
-      background-color: transparent;
+    .gt-comment-content {
+      background-color: transparent !important;
+
+      blockquote>p {
+        padding-left: 0;
+        border-left: none;
+      }
     }
 
     .gt-comment-content:hover {
