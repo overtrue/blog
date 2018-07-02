@@ -1,9 +1,8 @@
 ---
 layout: post
-title: HTML 标签语言属性 lang 的可选值列表
+title: HTML 语言国家码
 ---
 
-在我们写 HTML 的时候应该为我们的网页选择正确的语言属性，很多人纠结中文应该怎么写呢？`zh` ？ `zh-Hans` 还是 `zh-cn`？ 或者 `cn`？这里有一个列表供参考：
 
 |Language|Code|
 |--- |--- |
