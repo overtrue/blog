@@ -79,7 +79,7 @@ permalink: /open-source/
             wordSeparator: ""
           }
 
-        $.get('https://api.github.com/users/overtrue/repos?type=owner&per_page=100',
+        $.get('/opensource.json',
           function(repos){
             if (!repos) {
               repoListWrap.html('<div class="blankslate"><h3>加载失败</h3><p>请刷新或稍后再试...</p></div>');
