@@ -178,4 +178,19 @@ h2.meta {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+     background-color: #fefefe;
+     filter: invert(100%);
+  }
+
+  * {
+     background-color: inherit;
+  }
+
+  img:not([src*=".svg"]), video {
+     filter: invert(100%);
+  }
+}
+
 
