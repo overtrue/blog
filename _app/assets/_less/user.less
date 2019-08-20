@@ -42,7 +42,7 @@
 //
 // EXAMPLE: amsf.github.io custom appearance
 //
-@link-color: #5477F8;
+@link-color: #5477f8;
 
 body {
   position: relative;
@@ -58,7 +58,7 @@ body {
   }
   .sub-title {
     font-size: 108%;
-    opacity: .8;
+    opacity: 0.8;
   }
 }
 
@@ -68,15 +68,14 @@ body {
 }
 
 img.emoji {
-    margin: 0 0;
-    display: inline-block;
-    width: auto;
+  margin: 0 0;
+  display: inline-block;
+  width: auto;
 }
 
 h2.meta {
   margin-top: 0;
 }
-
 
 //
 // Gitalk
@@ -97,11 +96,11 @@ h2.meta {
     display: flex;
     background: #fff;
     padding: 20px;
-    border: 1px solid rgba(0,0,0,.09);
+    border: 1px solid rgba(0, 0, 0, 0.09);
     -webkit-border-radius: 3px;
     border-radius: 3px;
     margin-top: 5px;
-    box-shadow: 0 1px 4px rgba(0,0,0,.03);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
   }
   .gt-container {
     .gt-header-controls-tip {
@@ -114,7 +113,7 @@ h2.meta {
     .gt-comment-content {
       background-color: transparent !important;
 
-      blockquote>p {
+      blockquote > p {
         padding-left: 0;
         border-left: none;
       }
@@ -128,9 +127,9 @@ h2.meta {
       margin-top: 20px;
       padding: 20px;
       background: #fff;
-      -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.04);
-      box-shadow: 0 1px 4px rgba(0,0,0,.04);
-      border: 1px solid rgba(0,0,0,.09);
+      -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.09);
       -webkit-border-radius: 3px;
       border-radius: 3px;
     }
@@ -177,20 +176,3 @@ h2.meta {
     padding: 20px 4vw;
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-     background-color: #fefefe;
-     filter: invert(100%);
-  }
-
-  * {
-     background-color: inherit;
-  }
-
-  img:not([src*=".svg"]), video, :not('.g-emoji') {
-     filter: invert(100%);
-  }
-}
-
-
