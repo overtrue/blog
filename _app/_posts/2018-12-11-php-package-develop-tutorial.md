@@ -8,6 +8,6 @@ excerpt: 让我带你一步步从 0 开始发布你的第一个扩展包
 
 下图是目录结构，感兴趣的同学可以花 ￥20 元学习一下（毕竟我写了两个周，就当请我喝杯咖啡啦）。
 
-[![image](https://user-images.githubusercontent.com/1472352/49772566-b3b06080-fd28-11e8-9a15-e32952f59fdb.png)](推荐给你高品质的实战课程 https://learnku.com/courses/creating-package?rf=76)
+[![image](https://user-images.githubusercontent.com/1472352/49772566-b3b06080-fd28-11e8-9a15-e32952f59fdb.png)](https://learnku.com/courses/creating-package?rf=76)
 
 课程链接：[《PHP 扩展包实战教程 - 从入门到发布》](https://learnku.com/courses/creating-package?rf=76)
