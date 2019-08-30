@@ -10,4 +10,4 @@ excerpt: 让我带你一步步从 0 开始发布你的第一个扩展包
 
 [![image](https://user-images.githubusercontent.com/1472352/49772566-b3b06080-fd28-11e8-9a15-e32952f59fdb.png)](推荐给你高品质的实战课程 https://learnku.com/courses/creating-package?rf=76)
 
-课程链接：[《PHP 扩展包实战教程 - 从入门到发布》](推荐给你高品质的实战课程 https://learnku.com/courses/creating-package?rf=76)
+课程链接：[《PHP 扩展包实战教程 - 从入门到发布》](https://learnku.com/courses/creating-package?rf=76)
