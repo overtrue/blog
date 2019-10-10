@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 一种 Laravel 中简单设置多态关系模型别名（Polymorphic Types）的方式
+title: 一种 Laravel 中简单设置多态关系模型别名的方式
 excerpt: 我终于找到了一个比较方便的设置多态别名的方式了
 ---
 
