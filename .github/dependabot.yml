@@ -1,0 +1,18 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "21:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: urijs
+    versions:
+    - 1.19.5
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+  - dependency-name: grunt-contrib-uglify
+    versions:
+    - 5.0.0
