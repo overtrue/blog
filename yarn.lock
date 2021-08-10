@@ -1331,10 +1331,10 @@ grunt-csscomb@^4.0.0:
   dependencies:
     csscomb "~4.2.0"
 
-grunt-git@^1.0.14:
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/grunt-git/-/grunt-git-1.0.14.tgz#6d27d76c243d9ff71a562ec6c9899b14d95b930c"
-  integrity sha512-cjavNWMysd7qnNMfGArtSdRRbtCUkvDoY/IM0MRcQJCGEEr7B/Onbz53ke7uM/EZroXEOMWtdc647m8TnevoaQ==
+grunt-git@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/grunt-git/-/grunt-git-1.1.0.tgz#a909977a3459b8c81ce7024827655ee7e866b298"
+  integrity sha512-Ur3QPuiizWoxZ8Vtxs03V85mOiU23IyVThTHpwN+o6/3iRasuuYcmWznisNbq/b+XCiV7avS9IDMnxQar/pmzQ==
   dependencies:
     flopmang "^1.0.0"
 
