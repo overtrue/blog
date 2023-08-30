@@ -14,6 +14,7 @@
           labels: ['gitalk', 'comment'],
           id: md5('{{ page.id }}'),
           distractionFreeMode: false,
+          proxy: 'https://cors-server-ecru.vercel.app/github_access_token',
     })
 
     gitalk.render('page-comments')
