@@ -1,0 +1,73 @@
+---
+import '@fontsource-variable/manrope';
+import '../styles/global.css';
+interface Props {
+  title?: string;
+  description?: string;
+  article?: boolean;
+  experience?: boolean;
+  titleKey?: string;
+}
+const {
+  title = 'overtrue · 安正超 — 开源，让想法走得更远',
+  description = '安正超，大家更熟悉的名字是 overtrue。开源开发者，EasyWeChat、Easy SMS、Pinyin 作者，RustFS 贡献者。Keep calm and coding.',
+  article = false,
+  experience = false,
+  titleKey = experience ? 'homeTitle' : undefined,
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="zh-CN" class:list={{ 'experience-document': experience }}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>
+      (() => {
+        const root = document.documentElement;
+        let theme = 'system';
+        let language = 'zh';
+        try {
+          theme = localStorage.getItem('overtrue-theme') || 'system';
+          language = localStorage.getItem('overtrue-language') || 'zh';
+        } catch {}
+        if (!['light', 'dark'].includes(theme)) theme = 'system';
+        root.dataset.themePreference = theme;
+        root.dataset.theme =
+          theme === 'system'
+            ? matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light'
+            : theme;
+        root.lang = language === 'en' ? 'en' : 'zh-CN';
+      })();
+    </script>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f0f1f4" />
+    <meta property="og:type" content={article ? 'article' : 'website'} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL('/social.png', Astro.site)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@overtrue666" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/brand/mark-color.svg" />
+    <link rel="alternate" type="application/rss+xml" title="overtrue 的文章" href="/rss.xml" />
+    <title data-i18n={titleKey}>{title}</title>
+    <slot name="head" />
+  </head>
+  <body class:list={{ 'experience-page': experience, 'reading-page': !experience }}>
+    <a class="skip-link" href="#main" data-i18n="skip">
+      跳到内容
+    </a>
+    <slot />
+    <script>
+      import { initializePreferences } from '../scripts/preferences';
+      initializePreferences();
+    </script>
+  </body>
+</html>

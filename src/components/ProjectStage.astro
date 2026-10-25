@@ -1,0 +1,147 @@
+---
+import Arrow from './Arrow.astro';
+import { projects } from '../lib/projects';
+---
+
+<div class="project-scene" data-projects>
+  <div
+    class="project-names"
+    role="tablist"
+    aria-label="开源作品"
+    data-i18n-aria="projects"
+    aria-orientation="vertical"
+  >
+    {projects.map((project, index) => (
+      <button
+        id={`tab-${project.id}`}
+        type="button"
+        role="tab"
+        aria-controls={`panel-${project.id}`}
+        aria-selected={index === 0 ? 'true' : 'false'}
+        tabindex={index === 0 ? 0 : -1}
+        data-project={project.id}
+      >
+        <span class="project-name">{project.name}</span>
+        <span class="project-active-mark" aria-hidden="true">
+          ↗
+        </span>
+      </button>
+    ))}
+  </div>
+  <div class="project-stories">
+    {projects.map((project, index) => (
+      <section
+        class="project-story"
+        id={`panel-${project.id}`}
+        role="tabpanel"
+        aria-labelledby={`tab-${project.id}`}
+        hidden={index !== 0}
+        tabindex="0"
+      >
+        <div class="project-facts">
+          <span data-i18n={project.id === 'rustfs' ? 'contributor' : 'creator'}>
+            {project.role}
+          </span>
+          <span>{project.language}</span>
+        </div>
+        <h3>
+          <span class="project-story-name">{project.name}</span>
+          <span data-i18n={`${project.id}Kind`}>{project.kind}</span>
+        </h3>
+        <p data-i18n={`${project.id}Description`}>{project.description}</p>
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`在 GitHub 查看 ${project.name}`}
+          data-i18n-aria="projectLink"
+          data-i18n-params={JSON.stringify({ name: project.name })}
+        >
+          <span>GitHub</span>
+          <Arrow diagonal />
+        </a>
+      </section>
+    ))}
+  </div>
+</div>
+<noscript>
+  <style>
+    .experience-header {
+      background: var(--paper);
+      color: var(--ink);
+    }
+    .orbit-scene {
+      opacity: 0.15;
+    }
+    .project-story[hidden] {
+      display: block !important;
+    }
+    .project-names {
+      display: none;
+    }
+    .project-scene {
+      position: relative !important;
+    }
+    .project-story-name {
+      display: block !important;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+    .project-stories {
+      position: relative !important;
+      inset: auto !important;
+      width: auto !important;
+      max-width: 640px !important;
+      margin: 0 auto;
+      padding: 130px 24px;
+    }
+    .project-story {
+      margin-bottom: 50px;
+    }
+    .chapter-work {
+      height: auto !important;
+      min-height: 100svh;
+      background: #101727;
+      color: #eef2ff;
+    }
+    .chapter-work .chapter-label {
+      top: 70px;
+      color: #a4adc4;
+    }
+    .work-all {
+      bottom: 80px;
+    }
+  </style>
+</noscript>
+<script>
+  const root = document.querySelector<HTMLElement>('[data-projects]');
+  if (root) {
+    const tabs = [...root.querySelectorAll<HTMLButtonElement>('[role="tab"]')];
+    const panels = [...root.querySelectorAll<HTMLElement>('[role="tabpanel"]')];
+    const select = (index: number, focus = false) => {
+      tabs.forEach((tab, i) => {
+        tab.setAttribute('aria-selected', String(i === index));
+        tab.tabIndex = i === index ? 0 : -1;
+        panels[i].hidden = i !== index;
+      });
+      if (focus) tabs[index].focus();
+      document.dispatchEvent(new CustomEvent('projectchange', { detail: index }));
+    };
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => select(index));
+      tab.addEventListener('keydown', (event) => {
+        const keys = ['ArrowDown', 'ArrowUp', 'ArrowRight', 'ArrowLeft', 'Home', 'End'];
+        if (!keys.includes(event.key)) return;
+        event.preventDefault();
+        const next =
+          event.key === 'Home'
+            ? 0
+            : event.key === 'End'
+              ? tabs.length - 1
+              : (index + (['ArrowDown', 'ArrowRight'].includes(event.key) ? 1 : -1) + tabs.length) %
+                tabs.length;
+        select(next, true);
+      });
+    });
+  }
+</script>

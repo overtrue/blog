@@ -1,0 +1,50 @@
+---
+import Arrow from './Arrow.astro';
+import Preferences from './Preferences.astro';
+import '../styles/reading.css';
+const { active = '' } = Astro.props;
+---
+
+<header class="site-header">
+  <a class="reading-signature" href="/" aria-label="overtrue 首页" data-i18n-aria="home">
+    <img src="/brand/mark-color.svg" width="44" height="44" alt="" />
+  </a>
+  <nav aria-label="主导航" data-i18n-aria="navigation">
+    <a href="/#work">
+      <span class="nav-number" aria-hidden="true">
+        01
+      </span>
+      <span data-i18n="navWork">开源</span>
+    </a>
+    <a href="/writing/" aria-current={active === 'writing' ? 'page' : undefined}>
+      <span class="nav-number" aria-hidden="true">
+        02
+      </span>
+      <span data-i18n="navWriting">文字</span>
+    </a>
+    <a href="/#about">
+      <span class="nav-number" aria-hidden="true">
+        03
+      </span>
+      <span data-i18n="navAbout">联系</span>
+    </a>
+  </nav>
+  <div class="header-actions">
+    <a
+      class="github-link"
+      href="https://github.com/overtrue"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      GitHub
+      <Arrow diagonal />
+    </a>
+    <Preferences />
+  </div>
+</header>
+<script>
+  const header = document.querySelector('.site-header');
+  const updateHeader = () => header?.classList.toggle('is-scrolled', scrollY > 24);
+  addEventListener('scroll', updateHeader, { passive: true });
+  updateHeader();
+</script>

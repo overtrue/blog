@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Arrow from '../components/Arrow.astro';
+---
+
+<Base title="走远了 · overtrue" titleKey="errorTitle">
+  <div id="top"></div>
+  <Header />
+  <main id="main" class="error-page">
+    <h1>404.</h1>
+    <div class="error-message">
+      <h2 data-i18n="errorHeading">好像走得有点远。</h2>
+      <p data-i18n="errorMessage">这页不在这里，试试回到首页或文章归档。</p>
+      <a class="text-link" href="/">
+        <span data-i18n="backHome">回到首页</span>
+        <Arrow />
+      </a>
+      <a class="text-link" href="/writing/">
+        <span data-i18n="findOldPost">找一篇旧文章</span>
+        <Arrow />
+      </a>
+    </div>
+  </main>
+  <Footer compact />
+</Base>

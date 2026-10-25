@@ -1,0 +1,45 @@
+---
+import Arrow from './Arrow.astro';
+const { compact = false } = Astro.props;
+---
+
+<footer class:list={['site-footer', { compact }]}>
+  {!compact && (
+    <div class="footer-invitation">
+      <div>
+        <p data-i18n="invitation">有个有意思的想法？</p>
+        <a class="say-hello" href="mailto:i@overtrue.me">
+          Say hello
+          <Arrow diagonal />
+        </a>
+      </div>
+      <a class="email-link" href="mailto:i@overtrue.me">
+        i@overtrue.me
+      </a>
+    </div>
+  )}
+  <div class="footer-bottom">
+    <a class="footer-identity" href="/">
+      <img src="/brand/mark-color.svg" width="28" height="28" alt="" />
+      <span>
+        Chris An<span>安正超 / overtrue</span>
+      </span>
+    </a>
+    <p>Keep calm and coding.</p>
+    <div>
+      <a href="https://github.com/overtrue" target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+      <a href="https://x.com/overtrue666" target="_blank" rel="noopener noreferrer">
+        X / Twitter
+      </a>
+      <a href="/rss.xml">RSS</a>
+      <a href="#top">
+        <span data-i18n="backTop">回到顶部</span> <Arrow diagonal />
+      </a>
+    </div>
+  </div>
+  <div class="footer-wordmark" aria-hidden="true">
+    OVERTRUE
+  </div>
+</footer>

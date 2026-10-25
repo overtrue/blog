@@ -1,0 +1,120 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Arrow from '../components/Arrow.astro';
+import { getPosts, type Post } from '../lib/posts';
+export function getStaticPaths() {
+  const posts = getPosts();
+  return posts.map((post, index) => ({
+    params: { slug: post.slug },
+    props: { post, next: posts[index + 1] ?? posts[0] },
+  }));
+}
+interface Props {
+  post: Post;
+  next: Post;
+}
+const { post, next } = Astro.props;
+---
+
+<Base
+  title={`${post.title} · overtrue`}
+  description={post.excerpt || `${post.title}，安正超的开发手记，发布于 ${post.date}。`}
+  article
+>
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.title,
+      datePublished: post.date,
+      author: { '@type': 'Person', name: '安正超', url: 'https://overtrue.me' },
+      mainEntityOfPage: `https://overtrue.me/${post.slug}/`,
+    })}
+  />
+  <div id="top"></div>
+  <Header active="writing" />
+  <div class="reading-progress" aria-hidden="true">
+    <span data-reading-progress></span>
+  </div>
+  <main id="main" class="article-shell">
+    <a href="/writing/" class="article-back">
+      <Arrow />
+      <span data-i18n="allPosts">全部文字</span>
+    </a>
+    <article>
+      <header class="article-header">
+        <p class="article-kicker">notes / {post.category}</p>
+        <h1 lang="zh-CN">{post.title}</h1>
+        <div class="article-meta">
+          <a class="article-author" href="/#about">
+            <img src="/images/overtrue.jpg" width="26" height="26" alt="" />
+            Chris An <span>安正超</span>
+          </a>
+          <time datetime={post.date}>{post.date.replaceAll('-', '.')}</time>
+          <span
+            data-i18n="readingTime"
+            data-i18n-params={JSON.stringify({ minutes: post.minutes })}
+          >
+            {post.minutes} 分钟阅读
+          </span>
+        </div>
+      </header>
+      <div class="article-layout">
+        {post.headings.length > 0 && (
+          <aside class="reading-rail">
+            <details class="article-toc" open>
+              <summary>
+                <span data-i18n="toc">本文目录</span>{' '}
+                <span class="toc-count">{String(post.headings.length).padStart(2, '0')}</span>
+              </summary>
+              <nav aria-label="文章目录" data-i18n-aria="tocLabel" lang="zh-CN">
+                {post.headings.map((heading) => (
+                  <a
+                    href={`#${heading.id}`}
+                    data-toc-link
+                    lang="zh-CN"
+                    class:list={{ 'toc-nested': heading.depth === 3 }}
+                  >
+                    {heading.text}
+                  </a>
+                ))}
+              </nav>
+            </details>
+            <a class="rail-top" href="#top">
+              <span data-i18n="backTop">回到顶部</span> <Arrow />
+            </a>
+          </aside>
+        )}
+        <div class="article-body">
+          <p
+            class="archive-notice"
+            data-i18n="oldPost"
+            data-i18n-params={JSON.stringify({ year: post.year })}
+          >
+            写于 {post.year} 年，内容保留原貌。文中版本和链接可能已有变化。
+          </p>
+          <div class="prose" lang="zh-CN" set:html={post.html} />
+        </div>
+      </div>
+    </article>
+    <div class="article-footer">
+      <a href="/writing/" class="article-back">
+        <Arrow /> <span data-i18n="allPosts">全部文字</span>
+      </a>
+      <a href={`/${next.slug}/`} class="article-next">
+        <span data-i18n="readNext">接着读</span>
+        <strong lang="zh-CN">{next.title}</strong>
+        <Arrow diagonal />
+      </a>
+    </div>
+  </main>
+  <Footer compact />
+  <script>
+    import { enhanceReading } from '../scripts/reading';
+    enhanceReading();
+  </script>
+</Base>

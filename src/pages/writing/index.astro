@@ -1,0 +1,108 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Arrow from '../../components/Arrow.astro';
+import { getPosts } from '../../lib/posts';
+const posts = getPosts();
+const years = [...new Set(posts.map((post) => post.year))];
+---
+
+<Base
+  title="文字 · overtrue"
+  titleKey="writingTitle"
+  description="安正超的开发手记。关于 PHP、Laravel、开源，以及写代码时想通的一些事。"
+>
+  <div id="top"></div>
+  <Header active="writing" />
+  <main id="main" class="inner-page archive-page section-shell">
+    <header class="archive-header">
+      <div class="archive-heading">
+        <p class="section-kicker" data-i18n="archiveKicker">
+          文字 / 开发手记
+        </p>
+        <h1>
+          notes<span>.</span>
+        </h1>
+      </div>
+      <div class="archive-intro">
+        <p>
+          <span data-i18n="writingAside">一些想通的事，还有没想通的。</span>
+          <br />
+          <span data-i18n="archiveIntro">关于代码、开源，以及一路走来的记录。</span>
+        </p>
+        <label class="archive-search" for="article-search">
+          <span data-i18n="searchLabel">找一篇文章</span>
+          <input
+            id="article-search"
+            type="search"
+            placeholder="试试 Laravel、PHP、开源…"
+            data-i18n-placeholder="searchPlaceholder"
+            autocomplete="off"
+          />
+        </label>
+      </div>
+    </header>
+    <div class="archive-tools">
+      <span>
+        {posts.at(-1)?.year} — {posts[0]?.year}
+      </span>
+      <span
+        role="status"
+        aria-live="polite"
+        data-count
+        data-i18n="postCount"
+        data-i18n-params={JSON.stringify({ count: posts.length })}
+      >
+        共 {posts.length} 篇
+      </span>
+    </div>
+    <div class="archive-content">
+      {years.map((year) => (
+        <section class="archive-year" data-year aria-labelledby={`year-${year}`}>
+          <h2 id={`year-${year}`}>{year}</h2>
+          <div>
+            {posts
+              .filter((post) => post.year === year)
+              .map((post) => (
+                <a
+                  class="archive-row"
+                  href={`/${post.slug}/`}
+                  data-search={`${post.title} ${post.category} ${post.excerpt}`.toLowerCase()}
+                >
+                  <time datetime={post.date}>{post.date.slice(5).replace('-', '.')}</time>
+                  <h3 lang="zh-CN">{post.title}</h3>
+                  <span class="archive-category">{post.category}</span>
+                  <Arrow diagonal />
+                </a>
+              ))}
+          </div>
+        </section>
+      ))}
+      <p class="empty-search" data-empty data-i18n="emptySearch" hidden>
+        没有找到这篇文章，换个关键词试试。
+      </p>
+    </div>
+  </main>
+  <Footer compact />
+  <script>
+    import { currentLanguage, translate } from '../../lib/i18n';
+    const input = document.querySelector<HTMLInputElement>('#article-search');
+    const rows = [...document.querySelectorAll<HTMLAnchorElement>('[data-search]')];
+    input?.addEventListener('input', () => {
+      const query = input.value.trim().toLowerCase();
+      let count = 0;
+      rows.forEach((row) => {
+        row.hidden = !row.dataset.search!.includes(query);
+        if (!row.hidden) count++;
+      });
+      document.querySelectorAll<HTMLElement>('[data-year]').forEach((year) => {
+        year.hidden = !year.querySelector('[data-search]:not([hidden])');
+      });
+      const countElement = document.querySelector<HTMLElement>('[data-count]')!;
+      countElement.dataset.i18nParams = JSON.stringify({ count });
+      countElement.textContent = translate('postCount', currentLanguage(), { count });
+      document.querySelector<HTMLElement>('[data-empty]')!.hidden = count !== 0;
+    });
+  </script>
+</Base>

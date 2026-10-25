@@ -26,6 +26,9 @@ nbproject
 
 # Folders to ignore
 node_modules
+dist/
+.astro/
+test-results/
 
 # AMSF specified
 .amsf-cache

@@ -1,0 +1,38 @@
+<div class="orbit-scene" data-orbit>
+  <div class="orbit-fallback" aria-hidden="true">
+    <img src="/images/field-fallback.svg" width="640" height="640" alt="" />
+  </div>
+  <canvas
+    class="orbit-canvas"
+    tabindex="0"
+    role="img"
+    aria-label="随滚动变形的蓝色粒子光场"
+    data-i18n-aria="field"
+  ></canvas>
+  <button
+    type="button"
+    class="motion-toggle"
+    aria-label="暂停动效"
+    data-i18n-aria="pauseMotion"
+    hidden
+  >
+    <svg width="14" height="14" viewBox="0 0 12 12" aria-hidden="true">
+      <path d="M4 2v8M8 2v8" stroke="currentColor" stroke-width="1.3" fill="none" />
+    </svg>
+  </button>
+</div>
+<noscript>
+  <style>
+    .orbit-canvas,
+    .motion-toggle {
+      display: none;
+    }
+  </style>
+</noscript>
+<script>
+  const scene = document.querySelector<HTMLElement>('[data-orbit]');
+  if (scene)
+    import('../scripts/orbit')
+      .then(({ createOrbit }) => createOrbit(scene))
+      .catch(() => (scene.dataset.fallback = 'true'));
+</script>

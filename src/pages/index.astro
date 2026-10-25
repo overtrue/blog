@@ -1,0 +1,227 @@
+---
+import Base from '../layouts/Base.astro';
+import Arrow from '../components/Arrow.astro';
+import Orbit from '../components/Orbit.astro';
+import ProjectStage from '../components/ProjectStage.astro';
+import Preferences from '../components/Preferences.astro';
+import { getPosts } from '../lib/posts';
+import '../styles/experience.css';
+const posts = getPosts();
+const selected = [
+  'laravel-exception-with-context',
+  'php-package-develop-tutorial',
+  'about-composer-version-constraint',
+  'about-php-trait',
+].map((slug) => posts.find((post) => post.slug === slug)!);
+const chapters = [
+  { id: 'intro', label: '我', key: 'navIntro' },
+  { id: 'work', label: '开源', key: 'navWork' },
+  { id: 'writing', label: '文字', key: 'navWriting' },
+  { id: 'about', label: '联系', key: 'navAbout' },
+];
+---
+
+<Base experience>
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: '安正超',
+      alternateName: ['overtrue', 'Chris An'],
+      url: 'https://overtrue.me',
+      image: 'https://overtrue.me/images/overtrue.jpg',
+      sameAs: ['https://github.com/overtrue', 'https://x.com/overtrue666'],
+    })}
+  />
+  <div class="experience" data-experience data-scene="intro">
+    <div id="top"></div>
+    <div class="experience-wash" aria-hidden="true"></div>
+    <header class="experience-header">
+      <a class="signature" href="#intro" aria-label="overtrue 首页" data-i18n-aria="home">
+        <img src="/brand/mark-color.svg" width="44" height="44" alt="" />
+      </a>
+      <a class="identity-chip" href="#about">
+        <img src="/images/overtrue.jpg" width="32" height="32" alt="" />
+        <span>安正超</span>
+      </a>
+      <a
+        class="header-github"
+        href="https://github.com/overtrue"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+        <Arrow diagonal />
+      </a>
+      <Preferences />
+    </header>
+    <Orbit />
+    <nav class="scene-nav" aria-label="主导航" data-i18n-aria="navigation">
+      {chapters.map((chapter, index) => (
+        <a
+          href={`#${chapter.id}`}
+          data-scene-link={chapter.id}
+          aria-current={index === 0 ? 'location' : undefined}
+        >
+          <span class="nav-index" aria-hidden="true">
+            {String(index + 1).padStart(2, '0')}
+          </span>
+          <span class="nav-label" data-i18n={chapter.key}>
+            {chapter.label}
+          </span>
+        </a>
+      ))}
+      <span class="nav-track" aria-hidden="true">
+        <span></span>
+      </span>
+    </nav>
+    <span class="edge-note">Keep calm and coding.</span>
+    <main id="main">
+      <section class="chapter chapter-intro" id="intro" data-chapter aria-labelledby="hero-title">
+        <h1 class="split-name" id="hero-title" aria-label="overtrue">
+          <span class="name-back" aria-hidden="true">
+            {'over'.split('').map((letter) => (
+              <span data-letter-start>{letter}</span>
+            ))}
+          </span>
+          <span class="name-front" aria-hidden="true">
+            {'true'.split('').map((letter) => (
+              <span data-letter-start>{letter}</span>
+            ))}
+            <span class="name-dot" data-letter-start>
+              .
+            </span>
+          </span>
+        </h1>
+        <p class="intro-coordinate">Shenzhen, China</p>
+        <div class="intro-person">
+          <p class="intro-english">Chris An</p>
+          <p class="intro-chinese">
+            安正超<span> / overtrue</span>
+          </p>
+          <span data-i18n="introLine">写代码。做开源。保持好奇。</span>
+        </div>
+        <a class="chapter-next" href="#work" aria-label="查看开源作品" data-i18n-aria="viewWork">
+          <Arrow />
+        </a>
+      </section>
+      <section class="chapter chapter-work" id="work" data-chapter aria-labelledby="work-title">
+        <h2 class="chapter-label" id="work-title" data-i18n="workHeading">
+          我的一些开源作品
+        </h2>
+        <ProjectStage />
+        <a
+          class="work-all"
+          href="https://github.com/overtrue?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span data-i18n="moreWork">还有更多</span>
+          <Arrow diagonal />
+        </a>
+      </section>
+      <section
+        class="chapter chapter-writing"
+        id="writing"
+        data-chapter
+        aria-labelledby="writing-title"
+      >
+        <div class="writing-layout">
+          <div class="writing-heading">
+            <h2 class="notes-title" id="writing-title">
+              notes<span>.</span>
+            </h2>
+            <p class="writing-aside" data-i18n="writingAside">
+              一些想通的事，还有没想通的。
+            </p>
+            <a class="archive-entrance" href="/writing/">
+              <span
+                data-i18n="allPostsCount"
+                data-i18n-params={JSON.stringify({ count: posts.length })}
+              >
+                全部 {posts.length} 篇文字
+              </span>
+              <Arrow />
+            </a>
+          </div>
+          <div class="notes-field">
+            {selected.map((post) => (
+              <a class="note-fragment" href={`/${post.slug}/`}>
+                <time datetime={post.date}>
+                  {post.year}
+                  <span>{post.category}</span>
+                </time>
+                <h3 lang="zh-CN">{post.title}</h3>
+                <Arrow diagonal />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section class="chapter chapter-about" id="about" data-chapter aria-labelledby="about-title">
+        <span class="hello-type" aria-hidden="true">
+          hello.
+        </span>
+        <div class="identity-layout">
+          <div class="identity-heading">
+            <p class="identity-role" data-i18n="identityRole">
+              开源开发者 / AI dispatcher
+            </p>
+            <h2 id="about-title">
+              Chris An<span>安正超 / overtrue</span>
+            </h2>
+          </div>
+          <div class="identity-portrait">
+            <img
+              src="/images/overtrue.jpg"
+              width="400"
+              height="400"
+              alt="安正超 overtrue 的彩色头像"
+              data-i18n-alt="portrait"
+              loading="lazy"
+            />
+          </div>
+          <div class="identity-story">
+            <p data-i18n="biographyOne">
+              你也许在 Composer 里见过我的名字。我喜欢写代码，更喜欢有人用上它。
+            </p>
+            <p data-i18n="biographyTwo">
+              从 EasyWeChat 到 RustFS，一直在做点自己觉得有意思的东西。
+            </p>
+          </div>
+          <a class="contact-address" href="mailto:i@overtrue.me">
+            i@overtrue.me
+            <Arrow diagonal />
+          </a>
+          <div class="identity-links">
+            <a href="https://github.com/overtrue" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+            <a href="https://x.com/overtrue666" target="_blank" rel="noopener noreferrer">
+              X / Twitter
+            </a>
+            <a
+              href="https://github.com/sponsors/overtrue"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Sponsors
+            </a>
+            <a href="/rss.xml">RSS</a>
+          </div>
+        </div>
+        <div class="end-wordmark" aria-hidden="true">
+          {'OVERTRUE'.split('').map((letter) => (
+            <span data-letter-end>{letter}</span>
+          ))}
+        </div>
+      </section>
+    </main>
+  </div>
+  <script>
+    import { createExperience } from '../scripts/experience';
+    createExperience();
+  </script>
+</Base>
