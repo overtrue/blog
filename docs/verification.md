@@ -45,3 +45,5 @@ Logo：原图作为 `overtrue/overtrue` 的 `logo.svg`，四个版本及 PNG 放
 ## 旧评论凭据处理
 
 已移除 `legacy/_app/_includes/amsf/comment` 中的 Gitalk 初始化和明文 OAuth 凭据。新站构建产物不包含该旧配置。新增前端凭据回归检查：恢复旧配置时测试会失败，清理后共 11 项测试通过。没有测试凭据有效性，也未确认 OAuth App 端撤销；删除源码不等于撤销，Git 历史仍保留旧版本。账户所有者需要在 GitHub OAuth App 设置中撤销泄露的 client secret。
+
+用户随后确认已删除旧凭据；未进行有效性测试，也未独立验证 OAuth App 设置。源码清理已推送，回读远端确认旧评论配置不再包含凭据字段。
