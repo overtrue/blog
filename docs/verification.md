@@ -37,3 +37,7 @@ Logo：原图作为 `overtrue/overtrue` 的 `logo.svg`，四个版本及 PNG 放
 - 减少动态效果下切换主题仍保持暂停，字母保留静态版本；恢复后继续正常交互。Escape 可关闭主题选择。
 - 本轮控制台无错误。浏览器脚本、媒体模拟和尺寸已恢复，预览回到中文与系统主题。
 - 截图：`test-results/home-dark-en.png`、`test-results/article-dark-en.png`、`test-results/article-dark-mobile.png`；此前浅色文章截图为 `test-results/article-code-desktop.png`。
+
+## 上线后的可读性调整
+
+文章正文调整为桌面 18px、手机 17px；首页介绍、导航、元信息和操作文案同步放大。底部字标可见高度改为 0.68em，联系内容与字标之间保留留白。1440px 页脚、768px 英文归档、320px 英文文章和四个项目检查通过，无横向溢出；最窄屏幕下，最长项目介绍与导航仍有 14px 间距。页脚截图：`test-results/footer-wordmark-expanded.png`。本轮类型检查、构建、10 项测试与差异格式检查通过。

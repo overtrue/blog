@@ -80,7 +80,7 @@
   gap: 10px;
   align-items: center;
   margin-left: auto;
-  font-size: 11px;
+  font-size: 14px;
 }
 .identity-chip img {
   width: 30px;
@@ -92,7 +92,7 @@
   display: flex;
   gap: 12px;
   align-items: center;
-  font-size: 11px;
+  font-size: 14px;
 }
 .header-github svg {
   width: 17px;
@@ -102,7 +102,7 @@
   position: fixed;
   left: 40px;
   bottom: 40px;
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.015em;
   color: var(--stage-muted);
   z-index: 15;
@@ -130,7 +130,7 @@
   position: absolute;
   left: 8%;
   top: 17%;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 0.02em;
   z-index: 5;
   color: var(--stage-muted);
@@ -260,7 +260,7 @@
   right: 38px;
   top: 27%;
   writing-mode: vertical-rl;
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.05em;
   color: var(--stage-muted);
   z-index: 6;
@@ -378,7 +378,7 @@
   display: flex;
   gap: 20px;
   color: #9baaca;
-  font-size: 10px;
+  font-size: 13px;
   margin-bottom: 18px;
 }
 .project-story h3 {
@@ -388,7 +388,7 @@
   margin-bottom: 14px;
 }
 .project-story > p {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 2;
   color: #b2bdd6;
 }
@@ -397,7 +397,7 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 23px;
-  font-size: 11px;
+  font-size: 14px;
   border-bottom: 1px solid #c6d4ff38;
   padding-bottom: 14px;
 }
@@ -415,7 +415,7 @@
   display: flex;
   gap: 25px;
   align-items: center;
-  font-size: 11px;
+  font-size: 14px;
   color: var(--stage-muted);
   z-index: 6;
 }
@@ -460,7 +460,7 @@
     width: 340px;
   }
   .project-story > p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 @media (max-width: 1100px) and (min-width: 761px) {
@@ -513,7 +513,7 @@
     height: 25px;
   }
   .identity-chip > span {
-    font-size: 10px;
+    font-size: 13px;
   }
   .header-github {
     gap: 0;
@@ -554,7 +554,7 @@
   .intro-coordinate {
     right: 24px;
     top: 15%;
-    font-size: 8px;
+    font-size: 11px;
     writing-mode: initial;
   }
   .chapter-next {
@@ -568,13 +568,16 @@
     height: 17px;
   }
   .chapter-label {
-    top: 16%;
+    top: 14%;
     left: 8%;
-    font-size: 10px;
+    font-size: 13px;
+  }
+  .chapter-work {
+    min-height: 800px;
   }
   .project-names {
     left: 7%;
-    top: 25%;
+    top: 22%;
     width: 84%;
     gap: 10px;
   }
@@ -601,29 +604,29 @@
     font-size: 0.4em;
   }
   .project-stories {
-    left: 23%;
+    left: 8%;
     right: auto;
     bottom: 18%;
-    width: 69%;
+    width: 84%;
     max-width: 350px;
   }
   .project-facts {
-    font-size: 9px;
+    font-size: 12px;
     gap: 15px;
     margin-bottom: 10px;
   }
   .project-story h3 {
-    font-size: 17px;
+    font-size: 20px;
     margin-bottom: 8px;
   }
   .project-story > p {
-    font-size: 11px;
+    font-size: 14px;
     line-height: 1.9;
   }
   .project-story > a {
     margin-top: 13px;
     padding-bottom: 10px;
-    font-size: 10px;
+    font-size: 13px;
   }
   .project-story > a svg {
     width: 15px;
@@ -631,8 +634,9 @@
   }
   .work-all {
     left: 8%;
-    bottom: 13%;
-    font-size: 9px;
+    top: calc(14% + 28px);
+    bottom: auto;
+    font-size: 12px;
     gap: 13px;
   }
 }
@@ -644,14 +648,11 @@
     left: 10%;
   }
   .project-stories {
-    bottom: 16%;
+    bottom: 20%;
   }
   .project-names {
-    top: 25%;
+    top: 22%;
     gap: 9px;
-  }
-  .work-all {
-    bottom: 12%;
   }
   .chapter-next {
     width: 33px;
@@ -705,7 +706,7 @@
   transition: color 0.3s;
 }
 .nav-index {
-  font-size: 11px;
+  font-size: 14px;
   font-variant-numeric: tabular-nums;
   line-height: 28px;
   min-width: 26px;
@@ -714,7 +715,7 @@
     color 0.3s;
 }
 .nav-label {
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0.08em;
 }
 .scene-nav a:hover,
@@ -767,16 +768,16 @@
   margin-bottom: 12px;
 }
 .intro-person .intro-chinese {
-  font-size: 13px;
+  font-size: 16px;
   margin-bottom: 12px;
 }
 .intro-chinese span {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--stage-muted);
   margin-left: 8px;
 }
 .intro-person > span {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--stage-muted);
   letter-spacing: 0.035em;
 }
@@ -827,7 +828,7 @@
   color: var(--stage-accent);
 }
 .writing-aside {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.8;
   color: var(--stage-muted);
   margin: 34px 0 48px;
@@ -836,7 +837,7 @@
   display: inline-flex;
   align-items: center;
   gap: 26px;
-  font-size: 11px;
+  font-size: 14px;
 }
 .archive-entrance svg {
   width: 19px;
@@ -859,14 +860,14 @@
   min-height: 79px;
 }
 .note-fragment time {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.6;
   color: var(--stage-muted);
   font-variant-numeric: tabular-nums;
 }
 .note-fragment time > span {
   display: block;
-  font-size: 9px;
+  font-size: 12px;
   opacity: 0.7;
   margin-top: 3px;
 }
@@ -899,7 +900,7 @@
   isolation: auto;
   display: grid;
   align-items: center;
-  padding: 160px 8% 145px;
+  padding: 160px 8% calc(14vw + 40px);
 }
 .hello-type {
   position: absolute;
@@ -915,7 +916,7 @@
 .end-wordmark {
   position: absolute;
   inset: auto 0 0;
-  height: 0.46em;
+  height: 0.68em;
   overflow: hidden;
   font-size: clamp(64px, 20vw, 420px);
   font-weight: 750;
@@ -942,7 +943,7 @@
   grid-area: heading;
 }
 .identity-role {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--stage-muted);
   margin-bottom: 22px;
 }
@@ -953,7 +954,7 @@
 }
 .identity-heading h2 > span {
   display: block;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.6;
   letter-spacing: 0.02em;
   margin-top: 20px;
@@ -971,10 +972,10 @@
 }
 .identity-story {
   grid-area: story;
-  max-width: 480px;
+  max-width: 520px;
 }
 .identity-story p {
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.9;
   color: var(--soft-ink);
   pointer-events: auto;
@@ -1008,7 +1009,7 @@
   flex-wrap: wrap;
   gap: 18px;
   align-self: end;
-  font-size: 11px;
+  font-size: 14px;
   padding-bottom: 10px;
 }
 .identity-links a:hover {
@@ -1025,7 +1026,7 @@
   }
   .note-fragment {
     gap: 14px;
-    grid-template-columns: 35px minmax(0, 1fr) 16px;
+    grid-template-columns: 48px minmax(0, 1fr) 16px;
   }
   .note-fragment h3 {
     font-size: 17px;
@@ -1052,17 +1053,20 @@
     transform: none;
   }
   .scene-nav a {
-    gap: 6px;
-    height: 41px;
-    padding-bottom: 13px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 2px;
+    height: 58px;
+    padding-bottom: 12px;
   }
   .nav-index {
     min-width: 16px;
-    font-size: 9px;
-    line-height: 25px;
+    font-size: 12px;
+    line-height: 24px;
   }
   .nav-label {
-    font-size: 10px;
+    font-size: 13px;
     letter-spacing: 0;
   }
   .scene-nav a[aria-current] .nav-index {
@@ -1076,15 +1080,15 @@
     margin-bottom: 10px;
   }
   .intro-person .intro-chinese {
-    font-size: 11px;
+    font-size: 14px;
     margin-bottom: 9px;
   }
   .intro-chinese span {
-    font-size: 10px;
+    font-size: 13px;
     margin-left: 6px;
   }
   .intro-person > span {
-    font-size: 10px;
+    font-size: 13px;
   }
   .orbit-fallback {
     left: 15%;
@@ -1107,11 +1111,11 @@
     font-size: 29vw;
   }
   .writing-aside {
-    font-size: 12px;
+    font-size: 15px;
     margin: 22px 0;
   }
   .archive-entrance {
-    font-size: 10px;
+    font-size: 13px;
     gap: 20px;
   }
   .notes-field {
@@ -1119,7 +1123,7 @@
     width: 100%;
   }
   .note-fragment {
-    grid-template-columns: 34px minmax(0, 1fr) 16px;
+    grid-template-columns: 48px minmax(0, 1fr) 16px;
     gap: 14px;
     padding: 22px 0;
     min-height: 90px;
@@ -1128,10 +1132,10 @@
     min-height: 68px;
   }
   .note-fragment time {
-    font-size: 10px;
+    font-size: 13px;
   }
   .note-fragment h3 {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.6;
   }
   .note-fragment > svg {
@@ -1154,7 +1158,7 @@
     padding-top: 55px;
   }
   .identity-role {
-    font-size: 9px;
+    font-size: 12px;
     line-height: 1.6;
     margin-bottom: 18px;
     max-width: 145px;
@@ -1164,7 +1168,7 @@
     line-height: 1.1;
   }
   .identity-heading h2 > span {
-    font-size: 11px;
+    font-size: 14px;
     letter-spacing: 0;
     margin-top: 13px;
   }
@@ -1172,7 +1176,7 @@
     margin-top: 8px;
   }
   .identity-story p {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.9;
   }
   .contact-address {
@@ -1185,7 +1189,7 @@
     height: 24px;
   }
   .identity-links {
-    font-size: 11px;
+    font-size: 14px;
     gap: 22px;
     padding: 0;
   }
@@ -1195,7 +1199,7 @@
     right: 58px;
   }
   .intro-person > span {
-    font-size: 9px;
+    font-size: 12px;
   }
   .identity-layout {
     grid-template-columns: minmax(0, 1fr) 88px;
@@ -1211,7 +1215,7 @@
     gap: 10px;
   }
   .note-fragment h3 {
-    font-size: 14px;
+    font-size: 17px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1250,7 +1254,7 @@
     line-height: 1.7;
   }
   :root[lang='en'] .nav-label {
-    font-size: 9px;
+    font-size: 12px;
   }
   :root[lang='en'] .scene-nav a {
     gap: 4px;
@@ -1264,7 +1268,7 @@
     max-width: 215px;
   }
   :root[lang='en'] .nav-label {
-    font-size: 8px;
+    font-size: 11px;
   }
   :root[lang='en'] .scene-nav a {
     gap: 3px;

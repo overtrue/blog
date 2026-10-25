@@ -33,10 +33,10 @@
   display: flex;
   gap: 12px;
   align-items: baseline;
-  font-size: 12px;
+  font-size: 15px;
 }
 .site-header nav a > .nav-number {
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
 }
 .site-header nav a[aria-current],
@@ -50,7 +50,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 11px;
+  font-size: 14px;
 }
 .github-link svg {
   width: 17px;
@@ -65,7 +65,7 @@
 }
 .section-kicker,
 .article-kicker {
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0.04em;
   color: var(--muted);
 }
@@ -88,13 +88,13 @@
 }
 .archive-intro > p {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 16px;
   line-height: 2;
 }
 .archive-search {
   display: block;
   margin-top: 32px;
-  font-size: 10px;
+  font-size: 13px;
   color: var(--muted);
 }
 .archive-search input {
@@ -106,7 +106,7 @@
   padding: 13px 0;
   background: transparent;
   color: var(--ink);
-  font-size: 14px;
+  font-size: 17px;
 }
 .archive-search input:focus-visible {
   outline-offset: 6px;
@@ -116,7 +116,7 @@
   justify-content: space-between;
   padding: 22px 0;
   border-top: 1px solid var(--rule);
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
 }
 .archive-content {
@@ -147,7 +147,7 @@
 }
 .archive-row time,
 .archive-category {
-  font-size: 10px;
+  font-size: 13px;
   color: var(--muted);
 }
 .archive-category {
@@ -178,7 +178,7 @@
   padding: 90px 0 140px;
   text-align: center;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .article-shell {
@@ -189,7 +189,7 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
 }
 .article-back:hover {
@@ -223,7 +223,7 @@
   gap: 26px;
   margin-top: 32px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 14px;
 }
 .article-author {
   display: inline-flex;
@@ -237,7 +237,7 @@
 }
 .article-author > span {
   color: var(--muted);
-  font-size: 10px;
+  font-size: 13px;
   margin-left: 3px;
 }
 .article-layout {
@@ -253,7 +253,7 @@
 }
 .archive-notice {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.9;
   margin: 0 0 40px;
   padding-left: 13px;
@@ -266,7 +266,7 @@
   top: 118px;
 }
 .article-toc summary {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
   display: flex;
   align-items: center;
@@ -278,7 +278,7 @@
   display: none;
 }
 .article-toc summary > .toc-count {
-  font-size: 10px;
+  font-size: 13px;
   color: var(--muted);
 }
 .article-toc nav {
@@ -296,13 +296,13 @@
   margin-left: -1px;
   border-left: 2px solid transparent;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.7;
   overflow-wrap: anywhere;
 }
 .article-toc nav a.toc-nested {
   padding-left: 28px;
-  font-size: 10px;
+  font-size: 13px;
 }
 .article-toc nav a:hover,
 .article-toc nav a[aria-current] {
@@ -313,7 +313,7 @@
   display: inline-flex;
   align-items: center;
   gap: 18px;
-  font-size: 10px;
+  font-size: 13px;
   color: var(--muted);
   margin-top: 30px;
 }
@@ -340,7 +340,7 @@
   transform-origin: left;
 }
 .prose {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 2;
   color: var(--soft-ink);
   overflow-wrap: anywhere;
@@ -455,7 +455,7 @@
   padding: 0 22px;
   background: #101727;
   color: #b6c3dc;
-  font: 10px var(--font);
+  font: 13px var(--font);
   letter-spacing: 0.025em;
   border-bottom: 1px solid #859ac91a;
 }
@@ -465,7 +465,7 @@
   gap: 16px;
 }
 .code-lines {
-  font-size: 9px;
+  font-size: 12px;
   color: #7f8da6;
 }
 .copy-code {
@@ -475,7 +475,7 @@
   padding: 8px 0 8px 10px;
   background: transparent;
   color: #b8c7e1;
-  font-size: 10px;
+  font-size: 13px;
 }
 .copy-code:hover {
   color: white;
@@ -489,7 +489,7 @@
   padding: 24px;
   max-height: 38rem;
   overflow: auto;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.85;
   tab-size: 4;
   scrollbar-color: #53617b transparent;
@@ -512,7 +512,7 @@
   width: 100%;
   min-width: 560px;
   border-collapse: collapse;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.8;
 }
 .prose th {
@@ -560,7 +560,7 @@
 .article-next > span {
   grid-column: 1 / -1;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 13px;
 }
 .article-next strong {
   font-size: clamp(20px, 2.2vw, 32px);
@@ -579,7 +579,7 @@
 
 .site-footer {
   position: relative;
-  padding: 50px 8% calc(9vw + 40px);
+  padding: 50px 8% calc(14vw + 40px);
   border-top: 1px solid var(--rule);
   overflow: hidden;
 }
@@ -597,25 +597,25 @@
   align-items: center;
 }
 .footer-identity > span {
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: -0.04em;
 }
 .footer-identity > span > span {
   display: block;
-  font-size: 9px;
+  font-size: 12px;
   margin-top: 4px;
   color: var(--muted);
   letter-spacing: 0;
 }
 .footer-bottom > p {
-  font-size: 10px;
+  font-size: 13px;
   color: var(--muted);
 }
 .footer-bottom > div {
   display: flex;
   align-items: center;
   gap: 26px;
-  font-size: 10px;
+  font-size: 13px;
 }
 .footer-bottom > div > a:last-child {
   display: flex;
@@ -632,7 +632,7 @@
 .footer-wordmark {
   position: absolute;
   inset: auto 0 0;
-  height: 0.46em;
+  height: 0.68em;
   overflow: hidden;
   font-size: clamp(64px, 20vw, 420px);
   font-weight: 750;
@@ -652,7 +652,7 @@
 }
 .footer-invitation p {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 15px;
   margin-bottom: 12px;
 }
 .say-hello {
@@ -667,7 +667,7 @@
   height: 60px;
 }
 .email-link {
-  font-size: 13px;
+  font-size: 16px;
 }
 .error-page {
   display: grid;
@@ -694,7 +694,7 @@
 }
 .error-message p {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.9;
   margin: 22px 0 28px;
 }
@@ -706,7 +706,7 @@
   padding: 12px 0;
   margin-top: 10px;
   border-bottom: 1px solid var(--rule);
-  font-size: 12px;
+  font-size: 15px;
 }
 .text-link svg {
   width: 17px;
@@ -738,7 +738,7 @@
     content: '+';
     color: var(--blue);
     margin-left: 18px;
-    font-size: 16px;
+    font-size: 18px;
   }
   .article-toc[open] summary > span:after {
     content: '−';
@@ -781,7 +781,7 @@
     gap: 24px;
   }
   .site-header nav a {
-    font-size: 11px;
+    font-size: 14px;
     gap: 0;
   }
   .site-header nav a > .nav-number {
@@ -809,16 +809,16 @@
     margin-top: 28px;
   }
   .archive-intro > p {
-    font-size: 12px;
+    font-size: 15px;
   }
   .archive-search {
     margin-top: 25px;
   }
   .archive-search input {
-    font-size: 13px;
+    font-size: 16px;
   }
   .archive-tools {
-    font-size: 10px;
+    font-size: 13px;
     padding-block: 20px;
   }
   .archive-content {
@@ -841,10 +841,10 @@
     grid-template-columns: 34px minmax(0, 1fr) 16px;
   }
   .archive-row h3 {
-    font-size: 15px;
+    font-size: 17px;
   }
   .archive-row time {
-    font-size: 9px;
+    font-size: 12px;
   }
   .archive-row svg {
     width: 16px;
@@ -855,7 +855,7 @@
     padding-bottom: 27px;
   }
   .article-kicker {
-    font-size: 10px;
+    font-size: 13px;
     margin-bottom: 17px;
   }
   .article-header h1 {
@@ -866,7 +866,7 @@
   .article-meta {
     flex-wrap: wrap;
     gap: 13px 18px;
-    font-size: 10px;
+    font-size: 13px;
     margin-top: 24px;
   }
   .article-author {
@@ -882,11 +882,11 @@
     gap: 25px;
   }
   .archive-notice {
-    font-size: 10px;
+    font-size: 13px;
     margin-bottom: 30px;
   }
   .prose {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.95;
   }
   .prose h2 {
@@ -911,7 +911,7 @@
   }
   .prose pre {
     padding: 18px 16px;
-    font-size: 12px;
+    font-size: 15px;
     max-height: 32rem;
   }
   .article-footer {
@@ -936,13 +936,14 @@
     gap: 28px;
   }
   .footer-bottom > div {
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
     gap: 16px;
-    font-size: 9px;
+    font-size: 12px;
   }
   .footer-identity > span {
-    font-size: 15px;
+    font-size: 17px;
   }
   .error-page {
     grid-template-columns: minmax(0, 1fr);
@@ -1028,6 +1029,6 @@
     gap: 12px;
   }
   .site-header nav a {
-    font-size: 10px;
+    font-size: 13px;
   }
 }

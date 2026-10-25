@@ -136,7 +136,7 @@ canvas:focus-visible,
   padding: 0;
   background: transparent;
   border-radius: 50%;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 550;
 }
 .preference-button:hover {
@@ -166,7 +166,7 @@ canvas:focus-visible,
   border-radius: 4px;
   background: transparent;
   text-align: left;
-  font-size: 11px;
+  font-size: 14px;
 }
 .theme-options button:hover {
   background: color-mix(in srgb, var(--ink) 5%, transparent);
