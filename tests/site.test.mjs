@@ -82,3 +82,22 @@ test('primary navigation and progressive enhancement are present without JavaScr
   assert.ok(read('writing/index.html').includes(`共 ${sourcePosts.length} 篇`));
   assert.ok(existsSync(new URL('404.html', dist)) || existsSync(new URL('404/index.html', dist)));
 });
+
+test('browser sources and output contain no embedded OAuth client secret', () => {
+  const embeddedSecret = /\bclient[_-]?secret\s*["']?\s*[:=]\s*["'](?!\s*["'])[^"'\r\n]+["']/i;
+  const inspect = (directory) => {
+    for (const entry of readdirSync(directory, { withFileTypes: true })) {
+      const path = join(directory, entry.name);
+      if (entry.isDirectory()) inspect(path);
+      else {
+        assert.ok(
+          !embeddedSecret.test(readFileSync(path, 'utf8')),
+          `${path}: embedded OAuth client secret`,
+        );
+      }
+    }
+  };
+  for (const directory of ['legacy/', 'src/', 'public/', 'dist/']) {
+    inspect(fileURLToPath(new URL(directory, root)));
+  }
+});

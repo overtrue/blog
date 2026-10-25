@@ -34,7 +34,7 @@ npm run preview
 - `src/lib/i18n.ts`：中英文界面文案。
 - `src/lib/markdown.ts`：文章高亮、目录与阅读标记。
 - `legacy/_app/_posts/`：29 篇旧文章的完整原文，新站构建时读取；新增 Markdown 也使用 `YYYY-MM-DD-slug.md` 命名。
-- `legacy/`：重建前整套 Jekyll 站点备份，不参与旧版构建。
+- `legacy/`：重建前的 Jekyll 站点备份；已停用含前端 OAuth 凭据的旧评论配置。新站只读取文章与所需资源。
 - `docs/sources.md`：公开资料来源。
 - `docs/design.md`：视觉和动效说明。
 
